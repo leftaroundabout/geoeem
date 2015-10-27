@@ -1,9 +1,0 @@
-\select@language {english}
-\contentsline {section}{\numberline {1}Introduction}{2}
-\contentsline {subsection}{\numberline {1.1}Classification of methods}{2}
-\contentsline {section}{\numberline {2}Conductivity}{2}
-\contentsline {subsection}{\numberline {2.1}Mechanisms of electrical conductivity}{3}
-\contentsline {section}{\numberline {3}DC-resistivity method}{3}
-\contentsline {subsection}{\numberline {3.1}Basic equations of DC-resistivity}{4}
-\contentsline {subsubsection}{\numberline {3.1.1}Potential of a current electrode}{5}
-\contentsline {subsubsection}{\numberline {3.1.2}Potential distribution at the surface of a horizontally stratified earth (Solution of the Laplace equation \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:lapleq}\unskip \@@italiccorr )}})}{7}
