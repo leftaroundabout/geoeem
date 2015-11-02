@@ -107,7 +107,7 @@ Derivation of solutions of this elliptic partial differential equation using  di
 Assume a current source with strength $I$ at point $\vec{r}_0$, then the spatial current distribution can be given as:$\nabla\cdot\vec{j}=I\delta(\vec{r}-\vec{r}_0$
 and so:
 \begin{equation}
-\nabla\cdot(\sigma\nabla V)=-I\delta(\vec{r}-\vec{r}_0
+\nabla\cdot(\sigma\nabla V)=-I\delta(\vec{r}-\vec{r}_0)
 \end{equation}
 This equation can be solved numerically for arbitrary distribution of conductivity ratio.
 
@@ -179,12 +179,12 @@ V=\frac{\rho I}{2\pi r}
 \end{pspicture} 
 }
 
-\caption{Mise a la masse method}
+\caption{Mise-\`a-la-Masse method}
 \label{fig:misemasse}
 \end{center}
 \end{figure}
 
-In the case of the \textit{Mise a la masse method} the potential of the homogeneous full space is:
+In the case of the \textit{Mise-\`a-la-Masse method} the potential of the homogeneous full space is:
 \begin{equation}
 V=\frac{\rho I}{4\pi r}
 \end{equation}
@@ -251,13 +251,13 @@ Current line is bent towards to the normal if the resistivity of the second medi
 \end{minipage}
 \begin{minipage}[t]{0.45\textwidth}
 \centering
-	\captionof{figure}{asdf1}
+	\captionof{figure}{Bending towards normal}
 	\label{bound_01}
 \end{minipage}
 \hspace{0.05\textwidth}
 \begin{minipage}[t]{0.45\textwidth}
 	\centering
-	\captionof{figure}{asdf2}
+	\captionof{figure}{Bending away from normal}
 	\label{bound_02}
 \end{minipage}
 \end{figure}
@@ -322,5 +322,129 @@ In cylindrical coordinates ($r,\theta,z$):
 The solution is symmetrical to the vertical axis, so $\frac{\partial V}{\partial \theta}=\frac{\partial^2 V}{\partial\theta^2}=0$, so $V(r,\theta,z)=V(r,z)$. So the Laplace equation to be solved reduces to:
 \begin{equation}
 \frac{\partial^2 V}{\partial r^2}+\frac{1}{r}\frac{\partial V}{\partial r}+\frac{\partial^ V}{\partial z^2}=0
+\label{eq:laplcyl}
 \end{equation}
 
+Solution of \eqref{eq:laplcyl}. Ansatz:
+
+\begin{equation}
+V(r,z)=U(r)W(z) \label{eq:ansatz01}
+\end{equation}
+So the solution is the product of a function of $r$ alone and a function of $z$ alone. We substitute \eqref{eq:ansatz01} into \eqref{eq:laplcyl} and multiply all terms with $1/UW$:
+\begin{align}
+\underbrace{\frac{1}{UW}\frac{d^2 U}{dr^2}+\frac{1}{UW}\frac{DU}{dr}}_{\textrm{depends on } r}+\underbrace{\frac{1}{W}\frac{d^2 W}{dz^2}}_{\textrm{depends on } z}=0
+\end{align}
+
+This equation is satisfied, if
+\begin{align}
+\label{eq:ansatz03}
+\frac{1}{U}\frac{d^2 U}{dr^2}+\frac{1}{Ur}\frac{DU}{dr}&=-\lambda^2\\ 
+\frac{1}{W}\frac{d^2W}{dz^2}&=\lambda^2\label{eq:ansatz02}
+\end{align}
+where $\lambda$ is a real constant.
+
+\subsubsection*{Solution of \eqref{eq:ansatz02}}
+
+Using the Ansatz:
+\begin{equation}
+W=Ce^{-\lambda z}~~~,~~~ W=Ce^{\lambda z} \label{eq:ansatz05}
+\end{equation}
+where $C$ and $\lambda$ are arbitrary constants.
+\subsubsection*{Solution of \eqref{eq:ansatz03}}
+
+Using the Ansatz:
+\begin{equation}
+W=C J_0(\lambda r) \label{eq:ansatz06}
+\end{equation}
+with $J_0(\lambda r)$ the \textit{Bessel-function} of order zero.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{besselfunctions.eps}
+\caption{Bessel-functions source: $ https://de.wikipedia.org/wiki/Besselsche_Differentialgleichung$}
+\label{fig:besself}
+\end{center}
+\end{figure}
+
+We combine the two solutions (\eqref{eq:ansatz05} and \eqref{eq:ansatz06}) for the solution of \eqref{eq:laplcyl}:
+
+\begin{equation}
+V=Ce^{-\lambda z}J_0(\lambda r) ~~~,~~~ V=Ce^{\lambda z}J_0(\lambda r) \label{eq:ansatz07}
+\end{equation}
+$\lambda$ varies from $0$ to $\infty$ and $C$ varies in dependence of $\lambda$. Than we write a general solution of the potential \eqref{eq:laplcyl}:
+\begin{equation}
+V=\int\limits_{0}^{\infty}\left(\phi(\lambda)e^{-\lambda z}+\psi(\lambda)e^{\lambda z}\right)J_0(\lambda r) d\lambda \label{eq:sol-lapleq}
+\end{equation}
+
+Where $\phi(\lambda)$ and $\psi(\lambda)$ are arbitrary functions of $\lambda$.
+
+\subsubsection*{Potential of homogeneous halfspace}
+Starting of with the potential in cylindrical coordinates:
+\begin{equation}
+V=\frac{I\rho}{2\pi\sqrt{r^2+z^2}}\label{eq:2-20}
+\end{equation}
+Looking at the \textit{Lipschitz-Integral}:
+\begin{equation}
+\int\limits_{0}^{\infty}e^{-\lambda z}J_0(\lambda r)d\lambda=\frac{1}{\sqrt{r^2+z^2}} \label{eq:lipschitzint}
+\end{equation}
+
+Now using \eqref{eq:lipschitzint} we write \eqref{eq:2-20} as:
+\begin{equation}
+V=\frac{\rho_1 I}{2\pi}\int\limits_{0}^{\infty}e^{-\lambda z}J_0(\lambda r)d\lambda
+\end{equation}
+
+The general solution \eqref{eq:sol-lapleq} can now be written:
+\begin{equation}
+V=\frac{\rho_1 I}{2\pi}\int\limits_{0}^{\infty}\left(e^{-\lambda z}+\theta(\lambda)e^{-\lambda z}+X(\lambda)e^{\lambda z}\right) J_0(\lambda r)d\lambda \label{eq:sol-lapleq-2}
+\end{equation}
+
+Where $\theta(\lambda)$ and $X(\lambda)$ are arbitrary functions of $\lambda$, and $\phi(\lambda)=\frac{\rho_1 I}{2\pi}\left(1+\theta(\lambda)\right)$ and $\psi(\lambda)=\frac{\rho_1 I}{2\pi}X(\lambda)$.
+
+The solutions of the form \eqref{eq:sol-lapleq-2} are valid in all layers but $\theta(\lambda)$ and $X(\lambda)$ can be different for each layer $i$:
+\begin{equation}
+V_i=\frac{\rho_1 I}{2\pi}\int\limits_{0}^{\infty}\left(e^{-\lambda z}+\theta_i(\lambda)e^{-\lambda z}+X_i(\lambda)e^{\lambda z}\right)J_0(\lambda r) d\lambda\label{eq:sol-lapleq-3}
+\end{equation}
+
+\subsubsection*{Adaption of the solution to the boundary conditions}
+
+Assuming we are at the layer boundaries of $z=h_i$.
+
+
+\begin{compactenum}[A)]
+\item Potential \eqref{eq:sol-lapleq-3} is continious at each boundary plane in the subsurface:
+\begin{equation}
+V_i(r,h_i)=V_{i+1}(r,h_i)
+\end{equation}
+This equation can only be satisfied if the integrands on both sides are equal:
+\begin{equation}
+\theta_i(\lambda)e^{-\lambda h_i}+X_i(\lambda)e^{\lambda h_i}=\theta_{i+1}(\lambda)e^{-\lambda h_i}+X_{i+1}(\lambda)e^{\lambda h_i} \label{eq:boundary-2-23A}
+\end{equation}
+\item At each boundary plane $j_z$ the boundary condition must be fulfilled that:
+\begin{equation}
+j_z=-\frac{1}{\rho}\frac{\partial V}{\partial z}
+\end{equation} 
+and so
+\begin{equation}
+\frac{1}{\rho_i}\left(\left(1+\theta_i(\lambda)\right)e^{\lambda h_i}-X_i(\lambda)e^{\lambda h_i}\right)=\frac{1}{\rho_{i+1}}\left(\left(1+\theta_{i+1}(\lambda)\right)e^{\lambda h_i}-X_{i+1}(\lambda)e^{\lambda h_i}\right) \label{eq:boundary-2-23B}
+\end{equation}
+To satisfy this condition we differentiate the expression for the potential in the first layer \eqref{eq:2-20} with respect to $z$ and then substitute $z=0$:
+\begin{equation}
+\frac{1}{\rho_1}\frac{\partial V_1(r,0)}{\partial z}=0 ~~~,~ \textrm{for~~} r\neq 0
+\end{equation}
+We thus obtain the equation:
+\begin{equation}
+\int\limits_{0}^{\infty}\left(-1-\theta_1(\lambda)+X_1(\lambda)\right) J_0(\lambda_r)d\lambda=0
+\end{equation}
+\begin{equation}
+\Rightarrow \theta_1(\lambda)=X_1(\lambda)
+\end{equation}
+
+\item Near the current source the potential must approach to infinity
+\begin{align*}
+V_\infty=\frac{\rho I}{2\pi}\frac{1}{\sqrt{r^2+z^2}}
+\end{align*}
+which is approaching asymtotically to the potential for a layer extending to infinite height.
+
+\item $V\rightarrow 0$ if $z\rightarrow\infty$ $\Rightarrow X_n=0$, because otherwise $e^{\lambda z}$ would drive the potential to an infinite value at an infinite depth.
+
+\end{compactenum}
