@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {2.1}Basic equations of DC-resistivity}{4}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Potential of a current electrode}{5}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Potential distribution at the surface of a horizontally stratified earth (Solution of the Laplace equation \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:lapleq}\unskip \@@italiccorr )}})}{7}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Derivation of a formula for the apparent resistivity}{11}{subsubsection.2.1.3}

@@ -436,7 +436,7 @@ We thus obtain the equation:
 \int\limits_{0}^{\infty}\left(-1-\theta_1(\lambda)+X_1(\lambda)\right) J_0(\lambda_r)d\lambda=0
 \end{equation}
 \begin{equation}
-\Rightarrow \theta_1(\lambda)=X_1(\lambda)
+\Rightarrow \theta_1(\lambda)=X_1(\lambda) \label{eq:boundary-2-23C}
 \end{equation}
 
 \item Near the current source the potential must approach to infinity
@@ -445,6 +445,88 @@ V_\infty=\frac{\rho I}{2\pi}\frac{1}{\sqrt{r^2+z^2}}
 \end{align*}
 which is approaching asymtotically to the potential for a layer extending to infinite height.
 
-\item $V\rightarrow 0$ if $z\rightarrow\infty$ $\Rightarrow X_n=0$, because otherwise $e^{\lambda z}$ would drive the potential to an infinite value at an infinite depth.
+\item $V\rightarrow 0$ if $z\rightarrow\infty$ 
+\begin{equation}
+\Rightarrow X_n=0 \label{eq:boundary-2-23D}
+\end{equation}
+, because otherwise $e^{\lambda z}$ would drive the potential to an infinite value at an infinite depth.
 
 \end{compactenum}
+
+The set of equations \eqref{eq:boundary-2-23A} - \eqref{eq:boundary-2-23D} provides a system of $2n$ equation in $2n$ unknown functions $\theta(\lambda)$ and $X(\lambda)$. To obtain the solution subsitute \eqref{eq:boundary-2-23C} into \eqref{eq:boundary-2-23A} and \eqref{eq:boundary-2-23B} and subsitute \eqref{eq:boundary-2-23D} into \eqref{eq:boundary-2-23A} and \eqref{eq:boundary-2-23B}.
+
+For brevity, we introduce the notations:
+\begin{align*}
+u_i=e^{\lambda h_i}, v_i=\frac{1}{u_i}, p_i=\frac{\rho_i}{\rho_{i+1}}
+\end{align*}
+The system of equations then become:
+\begin{align*}
+(u_1+v_1)\theta_1-u_2\theta_2-v_2X_2&=0\\
+(v_1-u_1)\theta_1+p_1u_1\theta_2-p_1v_1X_2&=(1-p_1)u_1\\
+\vdots~~~~~~~~~~~~~~~~~~~~&\vdots\\
+u_{n-1}\theta_{n-1}+v_{n-1}X_{n-1}-u_{n-1}\theta_n&=0\\
+-u_{n-1}\theta_{n-1}+v_{n-1}X_{n-1}+p_{n-1}u_{n-1}\theta_n-p_{n-1}v_{n-1}X_n&=(1-p_{n-1})u_{n-1}
+\end{align*}
+Solution of the equations by applying \textit{Cramer's rule}. For example: Solution of a two layer case (layer 1: $\rho_1, h_1$, layer 2: $\rho_2$):
+\begin{align*}
+\theta_1&=\frac{ku}{1-ku} && \theta_2=\frac{k(1+u)}{1-ku}\\
+X_1&=\theta_1 && X_2=0
+\end{align*}
+with $u=e^{-2\lambda h_1}$ and the \textit{reflection coefficient of DC} $k=\frac{\rho_2-\rho_1}{\rho_2+\rho_1}$
+
+Interesting is the potential at the surface of the earth, with $z=0$ and \eqref{eq:boundary-2-23C}:
+\begin{align}
+V_0=V_1(r,z)&=\frac{\rho_1 I}{2\pi}\int\limits_{0}^{\infty}\left(1+2\theta_1\right)J_0(\lambda r)d\lambda\\
+&=\frac{\rho_1 I}{2\pi}\int\limits_{0}^{\infty}K(\lambda)J_0(\lambda r)d\lambda
+\end{align}
+where $K(\lambda)$ is the \textit{Slichter-function}.
+
+We consider the Lipschitz-integral:
+\begin{equation}
+\int\limits_{0}^{\infty}e^{-\lambda z}J_0(\lambda r)d\lambda=\frac{1}{\sqrt{r^2+z^2}}\stackrel{i=0}= \int\limits_{0}^{\infty}J_0(\lambda r)d\lambda=\frac{1}{r}
+\end{equation}
+\eqref{eq:sol-lapleq-3} can now be written in the form:
+\begin{equation}
+V_0(r)=\underbrace{\frac{I}{2\pi}\left(\frac{\rho_1}{r}\right.}_{\textrm{first layer}}\left.+\int\limits_{0}^{\infty}(T(\lambda)-\rho_1)J_0(\lambda r)d\lambda\right)
+\end{equation}
+
+Example/reminder for four point measurement:
+\begin{align*}
+V_1=\frac{I\rho}{2\pi}\left(\frac{1}{AM}-\frac{1}{BM}\right)
+\end{align*}
+
+\subsubsection{Derivation of a formula for the apparent resistivity}
+Take an arbitrary DC-Array (compare Fig. \ref{fig:dc01}). Then
+\begin{align*}
+\Delta U=\frac{I\rho}{2\pi}\left(\frac{1}{AM}-\frac{1}{AN}-\frac{1}{BM}+\frac{1}{BN}\right)
+\end{align*}
+\begin{align*}
+\rho_a=k\frac{\Delta U}{I}
+\end{align*}
+where $k$ is the geometrical factor.
+If we look at experimental data with an error of 1\% for the distances between the electrodes, the error in $\rho_a$ would be 2\%. But 10\% error in the lateral direction of the electrodes results only in 1\% error in $\rho_a$.
+
+In case of the Schlumberger array ($L=AM+MN/2$ and $a=MN$, $a\ll L$) we get a voltage decrease in U:
+\begin{align*}
+U&=2\left(V_0(\frac{L}{2}-\frac{a}{2}\right)-V_0\left(\frac{L}{2}+\frac{a}{2}\right)\\
+&\approx -2a\frac{\partial V_0}{\partial r}\bigg|_{r=L/2}
+\end{align*}
+and the geometrical factor in case of Schlumberger $k=\frac{\pi}{a}\left(\left(\frac{L}{2}\right)^2-\left(\frac{a}{2}\right)^2\right)$
+\begin{align*}
+\rho_a(L/2)=K\frac{U}{I}=\frac{2\pi}{I}\left(\frac{L}{2}\right)^2\frac{\partial V_0}{\partial r}
+\end{align*}
+with $\frac{d}{dx}J_0(x)=-J_1(x)$. From eq. 2.25!!!!:
+
+\begin{equation}
+\rho_a(L/2)=\rho_1+\left(\frac{L}{2}\right)^2\underbrace{\int\limits_{0}^{\infty}(T(\lambda)-\rho_1)J_1(\lambda L/2)\lambda d\lambda}_{\textrm{Stefanescu-Integral}} \label{eq:rho_a_01}
+\end{equation}
+
+The calculations of the model response $\rho_a(L/2)$ from given model parameters $(\rho_i,h_i)$ is a forward problem. 
+
+Given:
+\begin{figure}[h!]
+\begin{center}
+\caption{Given parameters}
+\label{fig:forwardgiven}
+\end{center}
+\end{figure}
