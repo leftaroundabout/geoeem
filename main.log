@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  2 NOV 2015 11:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  9 NOV 2015 11:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -724,45 +724,57 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen159
 \Gm@layoutvoffset=\dimen160
 \Gm@dimlist=\toks38
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box34
+\beforetitleunit=\skip51
+\aftertitleunit=\skip52
+\ttl@plus=\dimen161
+\ttl@minus=\dimen162
+\ttl@toksa=\toks39
+\titlewidth=\dimen163
+\titlewidthlast=\dimen164
+\titlewidthfirst=\dimen165
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count144
-\scratchdimen=\dimen161
-\scratchbox=\box34
+\scratchdimen=\dimen166
+\scratchbox=\box35
 \nofMPsegments=\count145
 \nofMParguments=\count146
-\everyMPshowfont=\toks39
+\everyMPshowfont=\toks40
 \MPscratchCnt=\count147
-\MPscratchDim=\dimen162
+\MPscratchDim=\dimen167
 \MPnumerator=\count148
 \makeMPintoPDFobject=\count149
-\everyMPtoPDFconversion=\toks40
+\everyMPtoPDFconversion=\toks41
 )
 Preview: Fontsize 10.95pt
 Preview: PDFoutput 1
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 23.
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring OFF on input line 27.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -771,9 +783,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count150
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -814,11 +826,11 @@ LaTeX Info: Redefining \nameref on input line 23.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -836,7 +848,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \newpage
+l.36 \newpage
               [1] (./sections/00_intro.tex
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 
@@ -862,7 +874,7 @@ Overfull \hbox (26.51501pt too wide) in paragraph at lines 35--36
  []
 
 ) (./sections/02_conduct.tex
-<main-pics.pdf, id=67, page=1, 246.9225pt x 142.5325pt>
+<main-pics.pdf, id=77, page=1, 246.9225pt x 142.5325pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 1>
@@ -873,26 +885,26 @@ Package pdftex.def Info: main-pics.pdf, page1 used on input line 38.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2]) (./sections/03_dc.tex
-<main-pics.pdf, id=78, page=2, 427.5975pt x 112.42pt>
+<main-pics.pdf, id=87, page=2, 427.5975pt x 112.42pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 2>
 Package pdftex.def Info: main-pics.pdf, page2 used on input line 37.
 (pdftex.def)             Requested size: 427.59645pt x 112.41972pt.
- <figs/Wenner.png, id=79, 448.7967pt x 130.8087pt>
+ <figs/Wenner.png, id=88, 448.7967pt x 130.8087pt>
 File: figs/Wenner.png Graphic file (type png)
 
 <use figs/Wenner.png>
 Package pdftex.def Info: figs/Wenner.png used on input line 49.
 (pdftex.def)             Requested size: 241.84843pt x 70.49193pt.
- <figs/Schlumberger.png, id=80, 448.7967pt x 130.8087pt>
+ <figs/Schlumberger.png, id=89, 448.7967pt x 130.8087pt>
 File: figs/Schlumberger.png Graphic file (type png)
 
 <use figs/Schlumberger.png>
 Package pdftex.def Info: figs/Schlumberger.png used on input line 51.
 (pdftex.def)             Requested size: 241.84843pt x 70.49193pt.
 
-<figs/Dipoldipol.png, id=81, 448.7967pt x 130.8087pt>
+<figs/Dipoldipol.png, id=90, 448.7967pt x 130.8087pt>
 File: figs/Dipoldipol.png Graphic file (type png)
 
 <use figs/Dipoldipol.png>
@@ -904,34 +916,34 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3 <./main-pics.pdf> <./main-pics.pdf>] [4 <./figs/Wenner.png (PNG copy)> <./fi
 gs/Schlumberger.png (PNG copy)> <./figs/Dipoldipol.png (PNG copy)>]
-<main-pics.pdf, id=135, page=3, 297.11pt x 115.43124pt>
+<main-pics.pdf, id=142, page=3, 297.11pt x 115.43124pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 3>
 Package pdftex.def Info: main-pics.pdf, page3 used on input line 140.
 (pdftex.def)             Requested size: 297.10927pt x 115.43095pt.
 
-<main-pics.pdf, id=136, page=4, 336.25626pt x 167.62625pt>
+<main-pics.pdf, id=143, page=4, 336.25626pt x 167.62625pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 4>
 Package pdftex.def Info: main-pics.pdf, page4 used on input line 180.
 (pdftex.def)             Requested size: 336.25543pt x 167.62582pt.
  [5 <./main-pics.pdf> <./main-pics.pdf>]
-<figs/grenz.pdf, id=179, 388.45125pt x 388.45125pt>
+<figs/grenz.pdf, id=187, 388.45125pt x 388.45125pt>
 File: figs/grenz.pdf Graphic file (type pdf)
  <use figs/grenz.pdf>
 Package pdftex.def Info: figs/grenz.pdf used on input line 218.
 (pdftex.def)             Requested size: 194.22514pt x 194.22514pt.
 
-<main-pics.pdf, id=180, page=5, 216.81pt x 216.81pt>
+<main-pics.pdf, id=188, page=5, 216.81pt x 216.81pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 5>
 Package pdftex.def Info: main-pics.pdf, page5 used on input line 245.
 (pdftex.def)             Requested size: 216.80946pt x 216.80946pt.
 
-<main-pics.pdf, id=181, page=6, 216.81pt x 216.81pt>
+<main-pics.pdf, id=189, page=6, 216.81pt x 216.81pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 6>
@@ -965,49 +977,100 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@@italiccorr' on input line 265.
 
-<main-pics.pdf, id=183, page=7, 175.65625pt x 170.6375pt>
+<main-pics.pdf, id=191, page=7, 175.65625pt x 170.6375pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 7>
-Package pdftex.def Info: main-pics.pdf, page7 used on input line 304.
+Package pdftex.def Info: main-pics.pdf, page7 used on input line 305.
 (pdftex.def)             Requested size: 175.6558pt x 170.63707pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [6 <./figs/grenz.pdf>] [7 <./main-pics.pdf> <./main-pics.pdf> <./main-pics.pdf>
-] <main-pics.pdf, id=262, page=8, 242.9075pt x 179.67125pt>
+] <main-pics.pdf, id=269, page=8, 242.9075pt x 179.67125pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 8>
-Package pdftex.def Info: main-pics.pdf, page8 used on input line 363.
+Package pdftex.def Info: main-pics.pdf, page8 used on input line 364.
 (pdftex.def)             Requested size: 242.90689pt x 179.67079pt.
 
-Overfull \hbox (10.31573pt too wide) in paragraph at lines 364--364
+Overfull \hbox (10.31573pt too wide) in paragraph at lines 365--365
 []\OT1/cmr/m/n/10.95 Figure 2.9: |Bessel-functions source: $\OML/cmm/m/it/10.95
  https \OT1/cmr/m/n/10.95 : \OML/cmm/m/it/10.95 ==de:wikipedia:org=wiki=Bessels
 che[]ifferentialgleichung$| 
  []
 
-[8 <./main-pics.pdf>] [9] [10])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
+[8 <./main-pics.pdf>] [9] [10]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\lambda' on input line 542.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 542.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 561--562
+
+ []
+
+<main-pics.pdf, id=364, page=9, 114.4275pt x 49.18375pt>
+File: main-pics.pdf Graphic file (type pdf)
+
+<use main-pics.pdf, page 9>
+Package pdftex.def Info: main-pics.pdf, page9 used on input line 616.
+(pdftex.def)             Requested size: 114.42722pt x 49.18361pt.
+
+<main-pics.pdf, id=365, page=10, 334.24875pt x 139.52126pt>
+File: main-pics.pdf Graphic file (type pdf)
+
+<use main-pics.pdf, page 10>
+Package pdftex.def Info: main-pics.pdf, page10 used on input line 653.
+(pdftex.def)             Requested size: 334.24792pt x 139.5209pt.
+ [12 <./main-pics.pdf>] [13 <./main-pics.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 712--713
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 732--733
+
+ []
+
+[14] [15])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 21951BB19375B44907B94FC0486A423D;770.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
+(rerunfilecheck)             Checksum: 5156B490986994CA74BAA490B169196D;971.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 11283 strings out of 494935
- 168088 string characters out of 6178122
- 291144 words of memory out of 5000000
- 14212 multiletter control sequences out of 15000+600000
+ 11598 strings out of 494935
+ 172196 string characters out of 6178122
+ 296535 words of memory out of 5000000
+ 14497 multiletter control sequences out of 15000+600000
  11698 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 59i,15n,94p,451b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,16n,94p,451b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
@@ -1022,10 +1085,10 @@ mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (12 pages, 280429 bytes).
+Output written on main.pdf (17 pages, 320314 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 164 words of extra memory for PDF output out of 10000 (max. 10000000)
 

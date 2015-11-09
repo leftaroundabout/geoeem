@@ -8,3 +8,8 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Potential of a current electrode}{5}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Potential distribution at the surface of a horizontally stratified earth (Solution of the Laplace equation \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:lapleq}\unskip \@@italiccorr )}})}{7}{subsubsection.2.1.2}
 \contentsline {subsubsection}{\numberline {2.1.3}Derivation of a formula for the apparent resistivity}{11}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Calculation of the resistivity transform $T(\lambda )$}{11}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Solution of the Stefanescu-Integral}{13}{subsubsection.2.1.5}
+\contentsline {paragraph}{\numberline {2.1.5.1}Basic Equations of the linear filter method: The fast HANKEL-transformation}{13}{paragraph.2.1.5.1}
+\contentsline {paragraph}{\numberline {2.1.5.2}Calculation of a filter}{15}{paragraph.2.1.5.2}
+\contentsline {paragraph}{\numberline {2.1.5.3}Example of a resistivity filter}{16}{paragraph.2.1.5.3}

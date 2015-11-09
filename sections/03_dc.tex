@@ -263,6 +263,7 @@ Current line is bent towards to the normal if the resistivity of the second medi
 \end{figure}
 
 \subsubsection{Potential distribution at the surface of a horizontally stratified earth (Solution of the Laplace equation \eqref{eq:lapleq})}
+\label{ch:2.1.2}
 Starting with a \textit{model}:
 
 \begin{figure}[h!]
@@ -354,7 +355,7 @@ where $C$ and $\lambda$ are arbitrary constants.
 
 Using the Ansatz:
 \begin{equation}
-W=C J_0(\lambda r) \label{eq:ansatz06}
+U=C J_0(\lambda r) \label{eq:ansatz06}
 \end{equation}
 with $J_0(\lambda r)$ the \textit{Bessel-function} of order zero.
 
@@ -489,10 +490,11 @@ We consider the Lipschitz-integral:
 \begin{equation}
 V_0(r)=\underbrace{\frac{I}{2\pi}\left(\frac{\rho_1}{r}\right.}_{\textrm{first layer}}\left.+\int\limits_{0}^{\infty}(T(\lambda)-\rho_1)J_0(\lambda r)d\lambda\right)
 \end{equation}
-
+with $T(\lambda)=\rho_1(1+2\theta_1(\lambda))$
 Example/reminder for four point measurement:
 \begin{align*}
 V_1=\frac{I\rho}{2\pi}\left(\frac{1}{AM}-\frac{1}{BM}\right)
+\label{eq:V0}
 \end{align*}
 
 \subsubsection{Derivation of a formula for the apparent resistivity}
@@ -530,3 +532,296 @@ Given:
 \label{fig:forwardgiven}
 \end{center}
 \end{figure}
+
+Now two steps are neccessary:
+\begin{itemize}
+\item Calculation of $T(\lambda)$
+\item Integration of \eqref{eq:rho_a_01} $\rightarrow$ Stefanescu-Integral
+\end{itemize}
+
+\subsubsection{Calculation of the resistivity transform $T(\lambda)$}
+
+For a method for the determination of $T(\lambda)$ see chapter \ref{ch:2.1.2}. Then we calculate the solution of the equation system $\theta_i$ and $X_i$ and determine $T(\lambda)$ using $T(\lambda)=\rho_1(1+2\theta_1(\lambda))$. This procedure is too time consuming for a high number of layers.
+
+Now we derive a recursion formula using the boundary conditions A to D from \ref{ch:2.1.2}. At first a new definition:
+
+\begin{equation}
+T_i(\lambda)=\rho_1\frac{1+\theta_1(\lambda)+X_i(\lambda)e^{2\lambda t_i-1}}{1+\theta_1(\lambda)-X_i(\lambda)e^{2\lambda t_i-1}}
+\label{eq:Tlambda}
+\end{equation}
+with $i=1,2,\ddots,n$, $t_i=h_1+h_2+\ddots+h_i$ and $t_0=0$.
+
+Because of \eqref{eq:boundary-2-23C}: $\theta_1(\lambda)=X_1(\lambda)$, we get: $T_1(\lambda)=T(\lambda)$.
+
+Because of \eqref{eq:boundary-2-23D}: $X_n=0$, we get: $T_n(\lambda)=\rho_n$.\\
+
+From the boundary conditions \eqref{eq:boundary-2-23A} and \eqref{eq:boundary-2-23B}:\\
+
+\begin{compactenum}[a)]
+\item $\theta_i(\lambda)e^{-\lambda t_i}+X_i(\lambda)e^{\lambda t_i}=\theta_{i+1}(\lambda)e^{-\lambda t_i}+X_{i+1}(\lambda)e^{\lambda t_i}$\\
+
+
+\item $\frac{1}{\rho_i}\left(\left(1+\theta_i(\lambda)\right)e^{-\lambda t_i}-X_i(\lambda)\right)=\frac{1}{\rho_i}\left(\left(1+\theta_{i+1}(\lambda)\right)e^{-\lambda t_i}-X_{i+1}(\lambda)\right)$
+\end{compactenum}
+
+The next steps are:
+\begin{itemize}
+\item Add $e^{-\lambda t_i}$ on both sides of \eqref{eq:boundary-2-23A}
+\item Divide each side over the corresponding side of \eqref{eq:boundary-2-23B}
+\item Cancel the left part of the new equation by $X_i(\lambda)$
+\end{itemize}
+Then:
+
+\begin{equation*}
+\rho_i\frac{K_i(\lambda)+e^{2\lambda t_i}}{K_i(\lambda)-e^{2\lambda t_i}}=T_{i+1}(\lambda)
+\end{equation*}
+with $K_i(\lambda)=\frac{1+\theta_i(\lambda)}{X_i(\lambda)}$
+
+Now the next step is to Solve the eq. \eqref{eq:Tlambda}, insert it and short translation and solving it for $T(\lambda)$:
+
+\begin{equation}
+T_i(\lambda)=\frac{T_{i+1}+\rho_i\tanh(\lambda h_i)}{1+\frac{T_{i+1}(\lambda)}{\rho_i}\tanh(\lambda h_i)}
+\label{eq:Tlambda2}
+\end{equation}
+which is the \textit{recursion formula of PEKERIS}.
+
+Now start with $T_n=\rho_n$, calculate step by step $T_i(\lambda)$ until $T_1(\lambda)=T(\lambda)$ $\rightarrow$ \textit{resistivity transform}
+
+Illustration of eq. \eqref{eq:Tlambda2}:
+\begin{align*}
+\lambda=\frac{1}{L/2} && T_n(\lambda)=\rho_n
+\end{align*}
+
+Two extreme values:
+\begin{align*}
+L/2 \rightarrow 0 && L/2 \rightarrow \infty
+\end{align*}
+
+\subsubsection*{Two layer model}
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.4\textwidth}{!}
+{
+\begin{pspicture}(0,-0.87890625)(4.5009375,0.85890627)
+\psline[linewidth=0.04cm](0.4809375,0.8389062)(4.4809375,0.8389062)
+\psline[linewidth=0.04cm](0.4809375,-0.16109376)(4.4809375,-0.16109376)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6523438,0.34390625){$\rho_1=5\Omega m$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6423438,-0.6560938){$\rho_2=10\Omega m$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.4423437,0.34390625){$\h_1=1 m$}
+\end{pspicture} 
+}
+
+\caption{Two layer model}
+\label{fig:2layermodel}
+\end{center}
+\end{figure}
+
+$T_n(\lambda)=T_2(\lambda)=10\Omega m$
+
+\begin{enumerate}
+\item $L/2 \rightarrow 0$ $\Rightarrow \lambda \rightarrow \infty \Rightarrow \tanh(\infty)\rightarrow 1$
+\begin{align*}
+T(\lambda)=T_1(\lambda)=\frac{T_{2}+\rho_1\tanh(\lambda h_1)}{1+\frac{T_{2}(\lambda)}{\rho_1}\tanh(\lambda h_1)}=\frac{10+5}{1+10/5}=5\Omega m
+\end{align*}
+\item $L/2\rightarrow \infty \Rightarrow \lambda	\rightarrow 0 \Rightarrow \tanh(0)\rightarrow 0$
+\begin{align*}
+T_1(\lambda)=\frac{10+0}{1+0}=10\Omega m
+\end{align*}
+\end{enumerate}
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.5\textwidth}{!}
+{
+\begin{pspicture}(0,-2.4576561)(12.062813,2.4576561)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.7809376,-1.8407812)(9.780937,-1.8407812)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.7809376,-1.8407812)(1.7809376,2.2592187)
+\psbezier[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm](1.7809376,1.1592188)(6.7809377,1.1592188)(4.6809373,-0.74078125)(8.780937,-0.74078125)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.9323437,2.2642188){$T(1/(L/2))$}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.542344,-2.2357812){$\lambda=(1/(L/2))$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4334375,1.2642188){10}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.3504688,-0.6357812){5}
+\end{pspicture} 
+}
+\caption{??????}
+\label{fig:lambdaTlambda}
+\end{center}
+\end{figure}
+
+\subsubsection{Solution of the Stefanescu-Integral}
+An analytical solution is not possible! One of the possibilities uses the linear filter method.
+\paragraph{Basic Equations of the linear filter method: The fast HANKEL-transformation}
+
+The calculation of a function $g(r)$ from $\rho(\lambda)$ by
+\begin{equation}
+g(r)=\int\limits_{0}^{\infty}\rho(\lambda)J_\nu(\lambda r)\lambda d\lambda
+\label{eq:hankeltransform}
+\end{equation}
+is defined as the \textit{HANKEL-transformation}. It expresses any given function as the weighted sum of an infinite number of Bessel-functions.
+
+The \textit{inverse Hankel-transformation}:
+
+\begin{equation}
+\rho(\lambda)=\int\limits_{0}^{\infty}g(r)rJ_\nu(\lambda r)dr
+\label{eq:hankeltransforminv}
+\end{equation}
+
+Then the Stefanescu Integral has the form of a Hankel-transformation. 
+
+
+The following method to calculate the integral \eqref{eq:hankeltransform} is called the fast Hankel-transform. It provides function values for $g(r)$ at discrete points.
+
+To solve this \textit{four steps are neccessary}:
+\begin{compactenum}[1)]
+\item The variables are transformed into logarithmic values.
+\begin{align*}
+x=\ln(r/r_0) && y=-\ln(\lambda/r_0)\\
+\Rightarrow r=e^x && \lambda=e^{-y}
+\end{align*}
+with $r_0$ the reference length. Then:
+\begin{align*}
+r\lambda=e^{x-y} && dr=rdx && d\lambda=-\lambda dy
+\end{align*}
+Insert this into eq. \eqref{eq:hankeltransform} and \eqref{eq:hankeltransforminv}:
+\begin{align*}
+rg(r)=-\int\limits_{-\infty}^{\infty}\rho(\lambda)\lambda J_\nu(e^{x-y})e^{x-y} dy
+\end{align*}
+$\lambda\rightarrow 0, y\rightarrow \infty$ and $\lambda\rightarrow \infty, y\rightarrow -\infty$.
+\begin{align*}
+\lambda\rho(\lambda)=\int\limits_{-\infty}^{\infty}g(r)r J_\nu(e^{x-y})e^{x-y} dx
+\end{align*}
+$r\rightarrow 0, x\rightarrow -\infty$ and $ r\rightarrow \infty, x\rightarrow \infty$.
+
+From this follow the \textit{Convolution integrals}:
+\begin{align}
+\begin{split}
+\label{eq:convintegrals}
+F(y)&=\int\limits_{-\infty}^{\infty}G(x)H(x-y)dx\\
+G(x)&=\int\limits_{-\infty}^{\infty}F(y)H(x-y)dy
+\end{split}
+\end{align}
+
+The requirement for the fast Hankel transformation is \textit{not} only that the integral \eqref{eq:hankeltransforminv} has the form of a Hankel transformation but it can be \textit{transferred} to a \textit{convolution integral} \eqref{eq:convintegrals}.\\
+
+
+\item The function $F$ is represented in the form (by using the sampling theorem):
+\begin{align}
+F(y)=\sum_{j=-\infty}^{\infty}F(y_j)\operatorname{sinc}\left(\pi\frac{y-y_j}{\Delta y}\right) \label{eq:2.33}
+\end{align}
+with $\operatorname{sinc}(z)=\frac{\sin(z)}{z}$ and $y_j=y_0+j\Delta y$ with $y_0$ arbitrary.
+
+Sampling is the process of converting a signal into a numeric sequence. A band limited function can only be perfectly reconstructed from a countable sequence of samples, if the band limit $B$ is not greater than half of the sampling rate. This leads to a formula for the reconstruction of the original function from it's samples:
+\begin{align*}
+\rho_{ny}=\frac{1}{2\Delta t}
+\end{align*}
+
+\item Inserting \eqref{eq:2.33} into \eqref{eq:convintegrals} gives:
+\begin{align}
+G(x)=\sum_{j=-\infty}^{\infty}c_j(x)F(y_j)
+\end{align}
+with $c_j(x)=\int\limits_{-\infty}^{\infty}\operatorname{sinc}\left(\pi\frac{y-y_j}{\Delta y}\right)H(x-y)dy$.
+
+The calculation of a general function is reduced to the transformation of a sinc function.\\
+
+\item The calculation of $G(x)$ is limited to the calculation of function values at discrete points: $x_k=x_0+k\Delta x$ with $k=...,-1,0,1,...$ and $x_0$ arbitrary and $\Delta x=\Delta y$.
+
+Inserting in the equation of $c_j(x)$:
+\begin{align*}
+c_j(x_k)=c_0(x_k)
+\end{align*}
+and so it follows:
+\begin{equation}
+G(x_k)=\sum_{j=-\infty}^{\infty}c_{k-j}F(y_j)\label{eq:2.35}
+\end{equation}
+with $c_{k-j}=c_0(x_k-j)$.
+
+That means only the coefficients $c_k$ will be calculated from the funtion.
+\begin{align}
+c_0(x)=\int\limits_{-\infty}^{\infty}H(x-y)\operatorname{sinc}\left(\pi\frac{y-y_0}{\Delta y}\right) dy
+\end{align}
+at the points $x_k$.
+The transformation is thereby reduced to the transformation of a single sinc function. Two conclusions result from the properties of the \textit{sinc response} for the application of the fast Hankel-transformation:
+\begin{enumerate}
+\item Only $c_k$ with values over a lower ($k_n$) and upper ($k_0$) limit are calculated:
+\begin{align*}
+k_n<c_k<k_0
+\end{align*}
+The amount of $c_k$ can be defined as a filter, so that \eqref{eq:2.35} becomes:
+\begin{equation}
+G(x_k)=\sum_{j=k-k_0}^{k-k_n}c_{k-j}F(y_j)
+\end{equation}
+\item Due to the oscillations, zero values of $c_0(x)$ result at distances of $\Delta x$ for large and small $x$ values. By subtle choice of $x_0$ it can be reached, that values $x_k$ will be close to zero points for large and small $k$ and the function values dissapear. That means the filter will be shorter.
+\end{enumerate}
+\end{compactenum}
+
+\paragraph{Calculation of a filter}
+There are several possibilities to calculate values of $c_0(x)$. The first paper was published by Ghosh (1971). There exists functions $F(y)$ for which the eq. \eqref{eq:convintegrals}: $G(x)=\int F(y)H(x-y)dy$ can be solved analytically and $G(x)$ can be calculated. For such cases we apply the Fourier-transformation.
+
+\begin{align*}
+\tilde{F}(k)=\frac{1}{2\pi}\int\limits_{-\infty}^{\infty}F(y)e^{-iky}dy
+\end{align*}
+and $\tilde{G}(k)$ analogous. Then \eqref{eq:convintegrals} has the form of a convolution integral:
+
+\begin{align*}
+G(x)&=F(y)\star H(x-y)\\
+G(k)=F(k)\cdot H(k)
+\end{align*}
+Also eq. eqref eq:2.34 has the form of a convolution integral:
+\begin{align*}
+c_j(x)=\int\limits_{-\infty}^{\infty}\operatorname{sinc}\left(\pi\frac{y-y_j}{\Delta y}\right)H(x-y)dy && y_0=0
+\end{align*}
+Therefore:
+\begin{align*}
+\tilde{c}_0(k)=\tilde{H}(k)\frac{1}{2\pi}\int\limits_{-\infty}^{\infty}\operatorname{sinc}\left(\pi\frac{y}{\Delta y}\right)e^{-kyi}dy
+\end{align*}
+with 
+\begin{align*}
+\frac{1}{2\pi}\int\limits_{-\infty}^{\infty}\operatorname{sinc}\left(\pi\frac{y}{\Delta y}\right)e^{-kyi}dy=\begin{cases}
+\frac{\Delta y}{2\pi}~~~~, for |k|<\pi/\Delta y\\
+0 ~~~~, otherwise
+\end{cases}
+\end{align*}
+follows:
+\begin{align*}
+\tilde{c}_0(k)=\begin{cases}
+\frac{\tilde{G}(k)}{\tilde{F}(k)}\frac{\Delta y}{2\pi}~~~~, for |k|<\pi/\Delta y\\
+0~~~~, otherwise
+\end{cases}
+\end{align*}
+
+
+\paragraph{Example of a resistivity filter}
+eq. 2.27
+\begin{align*}
+\rho_a(L/2)=\rho_1+(L/2)^2\int\limits_{0}^{\infty}(T(\lambda)-\rho_1)J_1(\lambda L/2)\lambda d\lambda\\
+x=\ln(L/2), y=-\ln(\lambda)
+\end{align*}
+$L/2$ in m, $\lambda is 1/m$
+\begin{align*}
+G(x)=\int F(y) H(x-y)dy
+\end{align*}
+with
+\begin{align*}
+G(x)&=\rho_a(e^x)-\rho_1\\
+F(y)&=\rho_a(e^{-y})-\rho_1\\
+H(x)&=J_1(e^x)
+\end{align*}
+We can now calculate the resistivity filter $c_0(k)=G(k)/F(k)$ by applying the fast HT.
+Filter with 3 values per decade $\rightarrow$ Ghosh, with 6 values per decade $\rightarrow$ O'Neill, with 10 $\rightarrow$ Johansen.
+
+For all filters:
+\begin{align*}
+\sum_{k=k_n}^{k_0}c_k=1
+\end{align*}
+Using eq. 2.37:
+\begin{align*}
+\rho_a(e^{x_k})=\sum_{j=k-k_0}^{k_n}c_{k-j}T(e^{-y_j})
+\end{align*}
