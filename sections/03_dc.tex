@@ -213,7 +213,7 @@ V=\frac{I\rho}{4\pi r}
 \subsection*{Boundary equations}
 Boundary with different conductivities.
 
-\begin{figure}
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.5]{figs/grenz.pdf}
 \caption{Boundary with dip angles GEOING s5}
@@ -771,8 +771,8 @@ There are several possibilities to calculate values of $c_0(x)$. The first paper
 and $\tilde{G}(k)$ analogous. Then \eqref{eq:convintegrals} has the form of a convolution integral:
 
 \begin{align*}
-G(x)&=F(y)\star H(x-y)\\
-G(k)=F(k)\cdot H(k)
+G(x)&=F(y)\ast H(x-y)\\
+G(k)&=F(k)\cdot H(k)
 \end{align*}
 Also eq. eqref eq:2.34 has the form of a convolution integral:
 \begin{align*}
@@ -825,3 +825,413 @@ Using eq. 2.37:
 \begin{align*}
 \rho_a(e^{x_k})=\sum_{j=k-k_0}^{k_n}c_{k-j}T(e^{-y_j})
 \end{align*}
+
+\subsection{Principle of equivalence}
+
+We can now calculate theoretical apparent resistivities for a 1D model. For example with the Schlumberger-Array:
+\begin{align*}
+\rho_a(x)=\sum_{k_{min}}^{k_{max}}\underbrace{T(\lambda)}_{Pekeris}\underbrace{\rho_k}_{filter coeff.}
+\end{align*}
+
+using $\rho_1=10\Omega m, h_1=1m, \rho_2=10\Omega m, h_2=5m, \rho_3=50\Omega m$ in a three layer case results in
+
+\begin{figure}[h!]
+\begin{center}
+
+\caption{Apparent resistivity in a three layer case}
+\label{fig:3lcaseappres}
+\end{center}
+\end{figure}
+
+\subsubsection*{Different types of $\rho_a$-curves}
+\begin{figure}[h!]
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.23)(11.06,1.23)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,-1.19)(0.0,1.21)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,-1.17)(2.66,-1.17)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.78,-1.21)(2.78,1.19)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.78,-1.19)(5.44,-1.19)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(5.58,-1.21)(5.58,1.19)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(5.58,-1.19)(8.24,-1.19)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.38,-1.21)(8.38,1.19)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.38,-1.19)(11.04,-1.19)
+\psbezier[linewidth=0.04](0.0,0.25)(0.68,0.27)(0.721172,-0.4784006)(1.18,-0.43)(1.638828,-0.38159943)(1.58,0.59)(2.28,0.57)
+\psbezier[linewidth=0.04](2.78,0.43)(4.02,1.11)(4.76,0.83)(5.18,-0.33)
+\psbezier[linewidth=0.04](5.58,-0.41)(6.5,0.11)(6.54,0.31)(8.06,0.59)
+\psbezier[linewidth=0.04](8.36,0.43)(9.38,0.25)(9.66,-0.01)(10.78,-0.75)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.843125,1.015){H}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0485935,1.035){K}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.9665623,0.935){A}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.756719,0.935){Q}
+\end{pspicture} 
+}
+\caption{Different types of curves (in a three layer case).}
+\end{center}
+\end{figure}
+
+\begin{description}
+\item[K-Type:] No difference between $\rho_a$-curves of different model, if $\rho_2\cdot h_2$ is identical.
+\item[H-Type:] $h_2/\rho_2$ is identical
+
+\end{description}
+\subsubsection*{Example:}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\textbf{Model 1}
+$\rho_1=1\Omega m, h_1=1m$\\
+$\rho_2=20\Omega m, h_2=1m$\\
+$\rho_1=1\Omega m$\\
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\textbf{Model 2}
+$\rho_1=1\Omega m, h_1=1m$\\
+$\rho_2=40\Omega m, h_2=0.5m$\\
+$\rho_1=1\Omega m$\\
+\end{center}
+\end{minipage}
+in both cases: $\rho_2\cdot h_2=20\cdot 1=40\cdot 0.5$.
+
+\begin{figure}[h!]
+\begin{center}
+XXX
+\caption{$\rho_a$ in both model cases.}
+\label{fig:modelexample}
+\end{center}
+\end{figure}
+Equivalent models should be calculated as the result of interpretation:
+
+\begin{figure}[h!]
+\begin{center}
+XXX
+\caption{Inversion result of equivalent models}
+\label{fig:eqmodels}
+\end{center}
+\end{figure}
+
+\subsection{Interpretation of resistivity data: Inversion}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{invidea.eps}
+\caption{Inversion idea}
+\label{fig:inv01}
+\end{center}
+\end{figure}
+The aim of the inversion is the minimization of the error function or cost function $\psi_d$ between observed and calculated apparent resistivity data. Minimize:
+\begin{equation}
+\psi_d=\|\vec{y}-f(\vec{m})\|^2
+\end{equation}
+$\vec{y}$ is the vector of measured data (e.g. $\vec{y}=(\rho_a(L/2=5m),\rho_a(L/2=10m),...)$.
+
+$f(\vec{m}$ is the vector of calculated data.
+
+$\psi_d$ is the norm of differences between measured and observed data.
+
+\subsubsection{Strategies for the inversion}
+Different methods to minimize the difference between measured and calculated data:
+\begin{itemize}
+\item Trial and error
+\item method of Zohdy
+\item Automatic inversion by linearisation of the forward operator $f(\vec{m})$
+\end{itemize}
+
+\paragraph{Trial and Error}
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.5\textwidth}{!}
+{
+\begin{pspicture}(0,-2.6034896)(7.9042706,2.6034896)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.2217708,2.2642188){\psframebox[linewidth=0.04]{Input: Starting model $m_0$ and $y$=data}}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.326302,0.76421875){\psframebox[linewidth=0.04]{Forward calculation $\rightarrow f(m_0)$}}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.006302,-0.53578126){\psframebox[linewidth=0.04]{RMS small?}}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.0766146,-2.2357812){\psframebox[linewidth=0.04]{Output: end model}}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.0367708,1.9592187)(3.0367708,1.0592188)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.0367708,0.45921874)(3.0367708,-0.24078125)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.0367708,-0.8407813)(3.0367708,-1.9407812)
+\psline[linewidth=0.04cm](4.036771,-0.54078126)(7.1367707,-0.54078126)
+\psline[linewidth=0.04cm](7.1367707,-0.54078126)(7.1367707,1.3592187)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.1367707,1.3592187)(3.1367707,1.3592187)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.608802,-1.2357812){Yes}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.6528645,0.26421875){No, new model}
+\end{pspicture} 
+}
+\caption{Trial and error scheme}
+\label{fig:trialanderror}
+\end{center}
+\end{figure}
+with
+\begin{equation}
+RMS=\sqrt{\frac{1}{N}\sum_{i=1}^{N}\frac{(\rho_a^m(i)-\rho_a^c(i))^2}{(\rho_a^c(i))^2}}
+\end{equation}
+$\rho_a^m$ measured data, $\rho_a^c$ calculated data.
+
+\paragraph{ZOHDY-technique}
+This method is suitable for the inversion of DC-resistivity data measured by a four electrode array (Schlumberger, Wenner, ...).Utilize the principle of equivalence: The fitting of the measured data by using a resistivity model with a \textit{large} number of layers has the same quality if less layers are used.
+
+\subsubsection*{Example:}
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.6\textwidth}{!}
+{
+\begin{pspicture}(0,-2.4329689)(14.081875,2.4329689)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,2.2345312)(0.0,-1.7654687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,2.2345312)(4.0,2.2345312)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.0,-1.7654687)(8.0,2.2345312)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.0,-1.7654687)(13.1,-1.7654687)
+\usefont{T1}{ptm}{m}{n}
+\rput(13.611406,-2.2604687){$L/2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.8214064,2.2395313){$\rho_a$}
+\psline[linewidth=0.04cm](1.5,2.1345313)(1.5,1.1345313)
+\psline[linewidth=0.04cm](1.5,1.1345313)(3.2,1.1345313)
+\psline[linewidth=0.04cm](3.2,1.1345313)(3.2,-0.06546875)
+\psline[linewidth=0.04cm](3.2,-0.06546875)(1.3,-0.06546875)
+\psline[linewidth=0.04cm](1.3,-0.06546875)(1.3,-1.6654687)
+\psline[linewidth=0.04cm](1.5,1.9345312)(1.7,1.9345312)
+\psline[linewidth=0.04cm](1.7,1.9345312)(1.7,1.6345313)
+\psline[linewidth=0.04cm](1.7,1.6345313)(1.6,1.6345313)
+\psline[linewidth=0.04cm](1.6,1.6345313)(1.6,1.3345313)
+\psline[linewidth=0.04cm](1.6,1.3345313)(1.9,1.3345313)
+\psline[linewidth=0.04cm](1.9,1.3345313)(1.9,1.0345312)
+\psline[linewidth=0.04cm](1.9,1.0345312)(2.2,1.0345312)
+\psline[linewidth=0.04cm](2.2,1.0345312)(2.2,0.83453125)
+\psline[linewidth=0.04cm](2.2,0.83453125)(2.5,0.83453125)
+\psline[linewidth=0.04cm](2.5,0.83453125)(2.5,0.53453124)
+\psline[linewidth=0.04cm](2.5,0.53453124)(2.8,0.53453124)
+\psline[linewidth=0.04cm](2.8,0.53453124)(2.8,0.33453125)
+\psline[linewidth=0.04cm](2.8,0.33453125)(3.3,0.33453125)
+\psline[linewidth=0.04cm](3.3,0.33453125)(3.3,0.23453125)
+\psline[linewidth=0.04cm](3.3,0.23453125)(2.9,0.23453125)
+\psline[linewidth=0.04cm](2.9,0.23453125)(2.9,0.03453125)
+\psline[linewidth=0.04cm](2.9,0.03453125)(2.5,0.03453125)
+\psbezier[linewidth=0.106000006,linestyle=dotted,dotsep=0.16cm](8.0,-0.45008412)(8.0,-1.0654688)(9.5,1.9345312)(13.0,-0.06546875)
+\psbezier[linewidth=0.106000006](8.1,-0.35008413)(8.1,-0.96546876)(9.1,2.0345314)(12.6,0.03453125)
+\end{pspicture} 
+}
+\caption{Example layers in inversion}
+\label{fig:inv02}
+\end{center}
+\end{figure}
+\subsubsection*{Procedure}
+\begin{compactenum}[1)]
+\item Starting model with $m$ layers, where $m$ is the number of measured data. $\rho_i=\rho_{a_i}$, $t_i=(L/2)_i$. Thickness of the $i$'th layer: $h_i=(L/2)_{i+1}-(L/2)_{i}$.
+Then do the forward and RMS calculation. For example RMS is 62\%.
+
+\item Reduction of the thickness of each layer as 0.9 and then do forward and RMS calculation. Repetition of the procedure until no improvement of RMS is possible.
+For example: 10 iterations reduce RMS to 12\%.
+
+\item Determination of resistivity of each layer:
+\begin{align*}
+\rho_{i+1}(j)=\rho_i(j)\frac{\rho_{a_{i,obs}}(j)}{\rho_{a_{i,c}}(j)}
+\end{align*}
+with $i$ the number of iterations and $j$ the number of layer = $L/2$ number. $\rho_i(j)$: resistivity of the $j$'th layer of the $i$'th iteration. $\rho_{a_{i,c}}$: calculated apparent resistivity data for the $j$'th layer and $i$'th iteration.
+
+Now do the forward calculation and calculate the RMS. Similar to step 2) repetition of the procedure (example 12\% to 1\%).
+\end{compactenum}
+\subsubsection*{Disadvantage:}
+No good result, if data points have relatively large noise, because every data point is a layer.
+
+\paragraph{Inversion by linearization of the forward operator}
+The aim of the inversion is to minimize the cost function $\psi_d$. A measure for the error:
+\begin{equation}
+X^2=\frac{1}{N}\sum_{i=1}^{N}\frac{(y_i-f_i)^2}{\sigma_i^2}
+\end{equation}
+where $n$ is the number of measured data and calculated data. $\sigma$ is the standard deviation. 
+\textit{Mathematically:} $\min \|y-f(m)\|^2$ (To solve use e.g. Gauss Newton method). The problem is not linear, therefore linearise $f(m)$ or $\psi_d$.
+
+The linearisation can be done by a Taylor expansion of the forward operator $f(m)$ for small model changes $\Delta m$ close to the starting model $m_0$:
+\begin{align}
+f(m_0+\delta m)=f(m_0)+\frac{\partial f(m_0)}{\partial m_0}\Delta m\approx f(m_0)+\tens{J}\Delta m
+\end{align}
+where $\tens{J}$ is the jacobian or sensitivity matrix. It describes the influence of model parameters on the model response. eq. 2.38 can now be written as:
+\begin{equation}
+\psi_d(m_a)=\|y-f(m_0)\|^2=(y-f(m_0))^T(y-f(m_0))
+\end{equation}
+using the Taylor expansion:
+\begin{equation}
+\psi_d(m_0+\Delta m)=\|y-f(m_0+\Delta m)\|^2=(y-f(m_0+\Delta m))^T(y-f(m_0+\Delta m))
+\end{equation}
+Set eq. 2.40 in eq. 2.42
+\begin{equation}
+\psi_d(m_0+\Delta m)=\|y-f(m_0)-\tens{J}\Delta m\|^2=(y-f(m_0)-\tens{J}\Delta m)^T(y-f(m_0)-\tens{J}\Delta m)
+\end{equation}
+Calculation of the extreme of $\psi_d$:
+\begin{align*}
+\frac{\partial \psi_d(m_0+\Delta m)}{\partial \Delta m}=0=\frac{\partial }{\partial \Delta m}(y-f(m_0)-\tens{J}\Delta m)^T(y-f(m_0)-\tens{J}\Delta m)
+\end{align*}
+with $\Delta d=y-f(m_0)$:
+\begin{align*}
+0&=\frac{\partial }{\partial \Delta m}(\Delta d-\tens{J}\Delta m)^T(\Delta d-\tens{J}\Delta m)\\
+&=\frac{\partial }{\partial \Delta m}(\Delta d^T\Delta d-\Delta d^T\tens{J}\Delta m-\Delta m J^T\Delta d +\Delta m^TJ^TJ\Delta m)\\
+&=2J^T\Delta d-2J^TJ\Delta m\\
+\Leftrightarrow J^TJ\Delta m&=J^T\Delta d
+\end{align*}
+Normal equation: Solution for this equation according to $\Delta m$
+\begin{equation}
+\Delta m=(J^TJ)^{-1}J^T\Delta d\label{eq:solutioninv}
+\end{equation}
+For the linear case the minima of $\psi_d$ can be reached after one iteration. For the non-linear case $m_1=m_0+\Delta m$, $m_2=m_1+\Delta m$, so the solution will be iteratively improved!
+
+
+\textit{Problem:} No solution of \eqref{eq:solutioninv} if $(J^T J)$ is singular, or in other words $\det(J^TJ)=0$. To stabilize it
+\begin{align*}
+\Delta m(J^TJ+\beta I)^{-1}J^T\Delta d
+\end{align*}
+with $\beta$ the damping factor and $I$ the identity matrix. The solution according to the eq. is known as \textit{Marquardt-Levenberg method}.
+
+\subsection{Solution of the 2D DC forward problem}
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.6\textwidth}{!}
+{
+\begin{pspicture}(0,-1.5789063)(12.715625,1.5589062)
+\psline[linewidth=0.04cm](0.0,0.5389063)(9.0,0.5389063)
+\psline[linewidth=0.04cm](3.0,0.5389063)(3.0,-0.86109376)
+\psline[linewidth=0.04cm](3.0,-0.86109376)(5.0,-0.86109376)
+\psline[linewidth=0.04cm](5.0,-0.86109376)(5.0,0.5389063)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](3.0,0.5389063)(5.0,1.5389062)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](5.0,0.5389063)(7.0,1.5389062)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.9014063,-0.15609375){$\sigma_2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9014063,-1.3560938){$\sigma_1$}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(11.0,0.5389063)(11.0,-0.86109376)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(11.0,0.5389063)(12.4,0.5389063)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(11.0,0.5389063)(12.0,1.2389063)
+\usefont{T1}{ptm}{m}{n}
+\rput(12.585468,0.44390625){x}
+\usefont{T1}{ptm}{m}{n}
+\rput(12.287812,1.3439063){y}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.2734375,-0.9560937){z}
+\end{pspicture} 
+}
+
+\caption{asdfasdf}
+\label{fig:solution2DDC}
+\end{center}
+\end{figure}
+
+\subsubsection*{Basic equations:}
+Ohm's law:
+\begin{align*}
+j=\sigma E\\
+E=-\nabla V\\
+j=-\sigma \nabla V
+\end{align*}
+By using the charge retention over a volume, the continuity equation can now be written as:
+\begin{equation}
+\nabla j=\frac{\partial q}{\partial t}\delta(x)\delta(y)\delta(z)\label{eq:poisson02}
+\end{equation}
+The charge density $q$ is represented at a point in the cartesian coordinates $(x,y,z)$ with the Dirac-distribution $\delta(x)$.
+
+\begin{align}
+-\nabla\left(\sigma(x,y,z)\nabla V(x,y,z)\right)=\frac{\partial q}{\partial t}\delta(x_s)\delta(y_s)\delta(z_s)
+\end{align}
+The \textit{Poisson equation}, with $x_s,y_s,z_s$ the coordinates of the source point. By using the vector equation $\nabla\cdot (\phi A) = \nabla\phi A +\phi\nabla \cdot A)$ with $A=\nabla V$ and $\phi=\sigma$. Then the equation \eqref{eq:poisson02} will be:
+\begin{equation}
+\nabla\sigma(x,y,z)\nabla V(x,y,z)+\sigma(x,y,z)\nabla^2 V(x,y,z)=-\frac{\partial q}{\partial t}\delta(x_s)\delta(y_s)\delta(z_s)\label{eq:poisson03}
+\end{equation}
+No change of electrical conductivity in y-direction so we have a 2D problem. $\Rightarrow \frac{\partial}{\partial y}\sigma(x,y,z)=0$.
+
+Application of this condition to \eqref{eq:poisson02} and \eqref{eq:poisson03}:
+\begin{align}
+-\nabla\cdot(\sigma\nabla V)&=\frac{\partial q}{\partial t}\delta(x_s)\delta(y_s)\delta(z_s)\\
+\nabla\sigma\cdot\nabla V+\sigma\nabla^2 V&=-\frac{\partial q}{\partial t}\delta(x_s)\delta(y_s)\delta(z_s)
+\end{align}
+Using the vector equation: $\nabla A\cdot\nabla B=\frac{1}{2}(-A\nabla^2 B + \nabla^2(AB)-B\nabla^2 A)$ with $A=\sigma$ and $B=V$ we get:
+
+\begin{align*}
+\nabla^2(\sigma(x,z)V(x,y,z))+\sigma(x,z)\nabla^2 V(x,y,z)-V(x,y,z)\nabla^2\sigma(x,z)=-2\frac{\partial q}{\partial t}\delta(x_s)\delta(y_s)\delta(z_s)
+\end{align*}
+Spatial distribution of the potential $V \rightarrow$ 3D, spatial distribution of the conductivity $\sigma \rightarrow$ 2D. Therefore the solution in this form is not possible.
+
+The $y$-dependence of the potential can now be eliminated by the \textit{Fourier-cosine transformation}:
+\begin{align*}
+\tilde{V}(x,K_y,z)=\int\limits_{0}^{\infty}V(x,y,z)\cos(K_y y)dy
+\end{align*}
+3D $V(x,y,z)$ is due to point source at $(x_s,y_s,z_s)$ over a 2D conductivity structure is reduced to a 2D transformed potential $\tilde{V}(x,K_y,z)$, with $K_y$ the wave number.
+
+For $\tilde{V}(x,K_y,z)$ the solution
+
+\begin{align}
+\nabla^2(\sigma(x,z)\tilde{V}(x,K_y,z))+\sigma(x,z)\nabla^2 \tilde{V}(x,K_y,z)-\tilde{V}(x,K_y,z)\nabla^2\sigma(x,z)-2K_y\sigma(x,z)\tilde{V}(x,K_y,z)=-2Q\delta(x_s)\delta(z_s)\label{eq:vtildeeq}
+\end{align}
+is looked for with $Q\delta(x_s)\delta(z_s)=\frac{1}{2}\frac{\partial q}{\partial t}$
+
+The relationship between the stationary current density $Q$ and the current:
+
+\begin{align*}
+Q=\frac{I}{2\Delta A}
+\end{align*}
+where $\Delta A$ is the area around the current electrodes.
+
+The eq. \eqref{eq:vtildeeq} is solved for different wave numbers. Afterwards do the inverse transformation:
+
+\begin{equation*}
+V(x,y,z)=\frac{2}{\pi}\int\limits_{0}^{\infty}\tilde{V}(x,K_y,z)\cos(K_y y)dK_y
+\end{equation*}
+Numerical solution of \eqref{eq:vtildeeq} with \textit{boundary conditions} (2D forward modelling). The boundary conditions are:
+
+\begin{compactenum}[a)]
+\item $V(x,y,z)$ is continuous between two media with different conductivity $\sigma$.
+\item $V(x,y,z)\rightarrow 0$ if $z\rightarrow\infty$
+\item $j_n$ is also continuous
+\end{compactenum}
+
+Now discretization of the subsurface and solution of \eqref{eq:vtildeeq} with (for example) finite differences:
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.4\textwidth}{!}
+{
+\begin{pspicture}(0,-2.7417188)(5.414375,2.7617188)
+\psline[linewidth=0.04cm](0.394375,2.2782812)(0.394375,-2.7217188)
+\psline[linewidth=0.04cm](1.394375,2.2782812)(1.394375,-2.7217188)
+\psline[linewidth=0.04cm](2.394375,2.2782812)(2.394375,-2.7217188)
+\psline[linewidth=0.04cm](3.394375,2.2782812)(3.394375,-2.7217188)
+\psline[linewidth=0.04cm](4.394375,2.2782812)(4.394375,-2.7217188)
+\psline[linewidth=0.04cm](0.394375,2.2782812)(5.394375,2.2782812)
+\psline[linewidth=0.04cm](0.394375,1.2782812)(5.394375,1.2782812)
+\psline[linewidth=0.04cm](0.394375,0.27828124)(5.394375,0.27828124)
+\psline[linewidth=0.04cm](0.394375,-0.7217187)(5.394375,-0.7217187)
+\psline[linewidth=0.04cm](0.394375,-1.7217188)(5.394375,-1.7217188)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.24125,2.4832811){1}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.3729688,2.5832813){2}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.3620312,2.5832813){3}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3753126,2.5832813){4}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.07296875,1.2832812){2}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.06203125,0.28328124){3}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.0753125,-0.71671873){4}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.494375,-0.42171875)(3.994375,-0.32171875)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.795781,-0.41671875){$\sigma = const$}
+\end{pspicture} 
+}
+\caption{Finite differences grid}
+\label{fig:fdgrid}
+\end{center}
+\end{figure}
+Calculation of the potential at the knots of the mesh and afterwards $\rho_a=K\frac{\Delta V}{I}$
+

@@ -1,0 +1,47 @@
+\subsection{Layered models}
+General solution approach of eq. 3.13.
+\begin{align*}
+\frac{d^2\hat{E}_x}{dz^2}=(i\omega\mu_0\sigma+k^2)\hat{E}_x
+\end{align*}
+in the $\omega,k$ domain for TE-fields $(E_z=0)$ for the m. layer.
+
+\begin{align*}
+\hat{E}_x(z)=A_me^{-K_m z}+B_me^{K_m z}&& z_m<z<z_{m+1}
+\end{align*}
+
+with 
+\begin{align}
+K_m=\sqrt{i\omega\mu_0\sigma+k^2}
+\end{align}
+
+\begin{align*}
+\hat{B}_z=k(Ee^{-kz}-Ie^{kz})
+\end{align*}
+
+
+Using eq. 3.15 ($\hat{B}_y=-\frac{1}{i\omega}\frac{d\hat{E}_x}{dz}$):
+
+\begin{align}
+\hat{B}_y=\frac{-1}{i\omega}\frac{d\hat{E}_x}{dz}=\frac{K_m}{i\omega}(A_me^{-K_m z}+B_me^{K_m z})
+\end{align}
+
+For the homogeneous half space of the model:
+
+\begin{align*}
+\hat{E}_x(z)=A_me^{-K_m z} && \hat{B}_y(z)=\frac{K_m}{i\omega}A_m e^{-K_m z}
+\end{align*}
+
+Analogous for $\hat{E}_y$ and $\hat{B}_x$ (see chapter 3.4).
+
+Continuity of $\hat{E}_x$ and $\hat{B}_y$ at the layer boundaries are valid if their impedance ratio:
+
+\begin{align}
+\frac{\hat{E}_x}{\hat{B}_y}=\frac{i\omega}{K_mG(z)}
+\end{align}
+
+with 
+\begin{align}
+G(z)=\frac{A_me^{-K_m z}-B_me^{K_m z}}{A_me^{-K_m z}+B_me^{K_m z}}
+\end{align}
+
+is continuous.

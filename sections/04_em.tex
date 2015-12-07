@@ -1,0 +1,655 @@
+\subsection{Principle of EM-induction as an example of transformer}
+The simplifications are 1 winding, no $\mu_r$ core.
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.4\textwidth}{!}
+{
+\begin{pspicture}(0,-2.3329687)(5.8628125,2.3329687)
+\psline[linewidth=0.04cm](4.5809374,0.03453125)(3.5809374,0.03453125)
+\psbezier[linewidth=0.04](3.5809374,0.03453125)(3.5809374,-0.7654688)(1.9361359,-1.6209651)(1.1809375,-0.96546876)(0.42573914,-0.3099724)(0.98633593,1.2876666)(1.8809375,1.7345313)(2.7755392,2.181396)(3.0244977,1.8654193)(3.5809374,1.0345312)
+\psline[linewidth=0.04cm](3.5809374,1.0345312)(4.5809374,1.0345312)
+\psline[linewidth=0.04cm](4.5809374,1.0345312)(4.5809374,0.63453126)
+\psline[linewidth=0.04cm](4.5809374,0.33453125)(4.5809374,0.03453125)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.342344,0.53953123){$V_p$}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.9809375,-1.3654687)(1.9809375,-1.9654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.1423438,-2.1604688){$F$}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.6809375,0.43453124)(1.0809375,1.2345313)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.4809375,1.5345312)(2.8809376,2.0345314)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8423438,2.1395311){$V_p$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.76234376,1.1395313){$U_{ind}$}
+\end{pspicture} 
+}
+\caption{EM Spule}
+\label{fig:em01}
+\end{center}
+\end{figure}
+\subsubsection*{Primary coil}
+Alternating current voltage: $V_p=V_{p_0}\sin(\omega t)$ produces magnetic field flux $F$, $F$ produces induced voltage $U_{ind}=-V_p=\frac{dF}{dt}$ (Lentz law). The induced voltage is orientated in the opposite direction of $\frac{dF}{dt}$.
+\begin{align*}
+F=\int V_p dt=-V_{p_0}\cos(1/\omega)\\
+V_p\sin(\omega t)=\frac{dF}{dt}=AL\dot{I}\\
+\Rightarrow I=-I_0\cos(\omega t)
+\end{align*}
+
+\subsubsection*{Secondary coil}
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.4\textwidth}{!}
+{
+\begin{pspicture}(0,-1.9211804)(5.8228126,1.9211805)
+\psline[linewidth=0.04cm](4.5809374,-0.24568419)(3.5809374,-0.24568419)
+\psbezier[linewidth=0.04](3.5809374,-0.24568419)(3.5809374,-1.0456842)(1.9361359,-1.9011805)(1.1809375,-1.2456841)(0.42573914,-0.59018785)(0.98633593,1.007451)(1.8809375,1.4543158)(2.7755392,1.9011805)(3.0244977,1.5852038)(3.5809374,0.7543158)
+\psline[linewidth=0.04cm](3.5809374,0.7543158)(4.5809374,0.7543158)
+\psline[linewidth=0.04cm](4.5809374,0.7543158)(4.5809374,0.35431582)
+\psline[linewidth=0.04cm](4.5809374,0.054315805)(4.5809374,-0.24568419)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.322344,0.25931582){$R_s$}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.6809375,0.1543158)(1.0809375,0.9543158)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.6123437,0.8593158){$U_{s}$}
+\psframe[linewidth=0.04,dimen=outer](4.7809377,0.35431582)(4.3809376,0.054315805)
+\end{pspicture} 
+}
+\caption{Secondary coil}
+\label{fig:em02}
+\end{center}
+\end{figure}
+$F$ produces secondary induced voltage:
+\begin{align*}
+U_s=-\frac{dF}{dt}=-V_{p_0}\sin(\omega t)
+\end{align*}
+Current drain due to Ohmic resistance
+\begin{align*}
+I_s=\frac{U_s}{R_s}=-V_{p_0}\sin(\omega t)/R_s
+\end{align*}
+$I_s$ produces additional magnetic flux:
+\begin{align*}
+F_s=\mu_0HA=\mu_0\frac{I}{l}A=-\mu_0\frac{r}{2}V_{p_0}\sin(\omega t)/R_s
+\end{align*}
+which generates an additional voltage:
+\begin{align*}
+V_{p_s}=-\frac{dF}{dt}=(\omega)\frac{r}{2}V_{p_0}\cos(\omega t)/R_s
+\end{align*}
+
+\subsection{Induction in the conductive subsurface}
+
+Primary current $\rightarrow$ current system in the ionosphere or artificial sources.
+
+Secondary coil $\rightarrow$ conductive subsurface
+
+\subsubsection*{Geomagnetic Depth Sounding}
+Aim: Derivation of in-situ conductivity from the observation of time varying electromagnetic fields at the earth surface.
+
+\begin{figure}
+\begin{center}
+\resizebox{0.5\textwidth}{!}
+{
+\begin{pspicture}(0,-3.79)(7.0009375,3.75)
+\psline[linewidth=0.04cm](0.9809375,1.75)(6.9809375,1.75)
+\psline[linewidth=0.04cm](0.9809375,-1.25)(6.9809375,-1.25)
+\psellipse[linewidth=0.04,dimen=outer](3.9809375,2.9)(2.0,0.85)
+\psellipse[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer](4.0309377,-3.0)(2.05,0.75)
+\psline[linewidth=0.08cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.0809374,-3.75)(3.8809376,-3.75)
+\psline[linewidth=0.08cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.9809375,2.05)(4.1809373,2.05)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.9809375,-1.25)(3.2809374,-0.55)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.9809375,-1.25)(3.2809374,-1.85)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8923438,-1.845){$B_i$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.9223437,-0.545){$B_e$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.41234374,-1.245){$z=0$}
+\end{pspicture} 
+}
+\caption{Geomagnetic sounding}
+\label{fig:em03}
+\end{center}
+\end{figure}
+
+Primary source region: Ionosphere, magnetosphere, where primary currents are flowing. Secondary source region: Conductive earth layers where secondary currents are flowing.
+
+We observe at the earth surface: 
+\begin{compactenum}[a)]
+\item Geomagnetic time variations $B(t)$ consisting of external $B^e$ and of interior $B^I$ part.
+
+\textit{Tendency}: In the horizontal components constructive interaction. Destructive interaction for the vertical component.
+
+\item Telluric $E(t)$ variations for induced currents in the subsurface
+
+\textit{Tendency}: Strong telluric currents at near surface conductivity contrasts.
+\end{compactenum}
+
+\subsection{Basic Elements}
+\subsubsection{Notation and units}
+\begin{description}
+\item[1. Position vector:] In spherical coordinates $(r,\theta,\lambda)$ with $r$ the distance from the Earth center, $\theta$ the polar distance and $\lambda$ the length or longitude.
+
+In plane coordinates: $z$ is the depth, $x$ the North direction and $y$ the East direction.
+
+\item[2. Physical base items:]~\\
+$\vec{B}$: magnetic induction in nT $=10^{-9}$ Vsm$^{-2}$. 
+
+$\vec{E}$: electric field in mV/km $=10^{-6}$ V/m.
+
+$\vec{j}$: electric current density in A/m$^2$.
+
+$\eta$: electric charge density in As/m$^3$.
+
+
+\item[3. Material constants:] ~\\
+$\epsilon,\mu$: electric permittivity and magnetic permittivity
+
+$\mu_0=4\pi\cdot 10^{-7}$ Vs/Am
+
+$\epsilon_0=8.85\cdot 10^{-12}$ As/Vm
+
+$\sigma$: conductivity in S/m
+
+$\rho$: resistivity in $\Omega$ m
+
+\item[4. Material equations:]~\\
+
+$\vec{D}=\epsilon\epsilon_0\vec{E}$: electrical displacement
+
+$\vec{B}=\mu\mu_0\vec{H}$: $\vec{H}$ the magnetic field strength
+
+????????
+
+\item[5. Ranges:]~\\
+
+Global Earth magnetic field: $3-6\cdot 10^4$ nT 
+
+Earth magnetic variations: 1-100 nT
+
+Telluric variations: 0.1 - 10 mV/km
+
+Earth electric soil potential: 10 mV
+\end{description}
+
+$\mu=1+K$ with $K<10^{-2}$ for rocks. Therefore $\mu=1$ for the following derivations. $\epsilon= 1-80$ (water).
+
+\begin{tabularx}{\textwidth}{c|c|c|c}
+No. & Conductivity of & Charge carrier & T-dependce\\
+\hline
+1 & Gases & Ions, dust particles aerosols & - \\
+2 & Semi conductors & electrons & with $T$ increasing according to $e^{-A/k_B T}$, $A$: activation energy\\
+3 & Electrolyt & Ions & $p$ dependence of concentration of ions\\
+4 & Metal & free electrons & Drecreasing with increasing $T$
+\end{tabularx}
+
+\begin{compactenum}[1)]
+\item Atmosphere: $\rho\sim 10^{15}\Omega$m
+\item Crystal: $\rho\sim 10^{7}\Omega$m
+\item Sea water: $\rho\sim 0.25\Omega$m
+\item Earth's core: $\rho\sim 10^{-5}\Omega$m
+\end{compactenum}
+
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.6\textwidth}{!}
+{
+\begin{pspicture}(0,-4.2992187)(15.759687,4.3192186)
+\psline[linewidth=0.04cm](0.9578125,3.1207812)(12.957812,3.1207812)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.9578125,3.4207811)(0.9578125,-4.079219)
+\psline[linewidth=0.04cm](1.9578125,3.4207811)(1.9578125,3.1207812)
+\psline[linewidth=0.04cm](2.9578125,3.4207811)(2.9578125,3.1207812)
+\psline[linewidth=0.04cm](3.9578125,3.4207811)(3.9578125,3.1207812)
+\psline[linewidth=0.04cm](4.9578123,3.4207811)(4.9578123,3.1207812)
+\psline[linewidth=0.04cm](5.9578123,3.4207811)(5.9578123,3.1207812)
+\psline[linewidth=0.04cm](6.9578123,3.4207811)(6.9578123,3.1207812)
+\psline[linewidth=0.04cm](7.9578123,3.4207811)(7.9578123,3.1207812)
+\psline[linewidth=0.04cm](8.957812,3.4207811)(8.957812,3.1207812)
+\psline[linewidth=0.04cm](9.957812,3.4207811)(9.957812,3.1207812)
+\psline[linewidth=0.04cm](10.957812,3.4207811)(10.957812,3.1207812)
+\psline[linewidth=0.04cm](11.957812,3.4207811)(11.957812,3.1207812)
+\psline[linewidth=0.04cm](12.957812,3.4207811)(12.957812,3.1207812)
+\psline[linewidth=0.04cm](0.7578125,1.1207813)(0.9578125,1.1207813)
+\psline[linewidth=0.04cm](0.7578125,-0.87921876)(0.9578125,-0.87921876)
+\psline[linewidth=0.04cm](0.7578125,-2.8792188)(0.9578125,-2.8792188)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.98859376,3.8257813){-5}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9854689,3.8257813){-3}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.9784374,3.8257813){-1}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.9348435,3.8257813){0}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.936406,3.8257813){2}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.93875,3.8257813){4}
+\psframe[linewidth=0.04,dimen=outer](5.7578125,2.9207811)(4.9578123,2.6207812)
+\psframe[linewidth=0.04,dimen=outer](7.8578124,2.9207811)(5.9578123,2.6207812)
+\psframe[linewidth=0.04,dimen=outer](9.857813,2.9207811)(8.057813,2.6207812)
+\psline[linewidth=0.04cm](9.957812,2.8207812)(9.957812,1.7207812)
+\psline[linewidth=0.04cm](9.957812,1.7207812)(10.957812,1.7207812)
+\psline[linewidth=0.04cm](10.957812,1.7207812)(10.957812,2.8207812)
+\psbezier[linewidth=0.04](9.957812,1.7207812)(7.7578125,1.4207813)(6.2908163,0.5202365)(6.2578125,-0.17921875)(6.2248087,-0.878674)(7.2578125,-0.37921876)(7.7578125,-1.0792187)(8.2578125,-1.7792188)(6.563985,-1.3792378)(6.5578127,-1.7792188)(6.55164,-2.1791997)(7.1578126,-1.9792187)(7.1578126,-2.3792188)(7.1578126,-2.7792187)(4.2578125,-3.8792188)(1.4578125,-4.2792187)
+\usefont{T1}{ptm}{m}{n}
+\rput(14.379219,4.125781){$\rho(\Omega m)$}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(12.857813,2.2207813)(11.157812,2.2207813)
+\usefont{T1}{ptm}{m}{n}
+\rput(14.177969,2.2257812){upper earth crust}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.43671876,-3.8742187){z (km)}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.2903125,-2.8742187){1000}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4003125,-0.87421876){100}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4103125,1.1257813){10}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.410625,2.4257812){Ocean}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.0803127,2.4257812){Sediments}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.906094,2.4257812){Crystalline}
+\end{pspicture} 
+}
+\caption{Resistivity structure on Earth with depth}
+\label{fig:resdepth}
+\end{center}
+\end{figure}
+The upper earth crust has conductive anomalies in different regions.
+
+\begin{figure}
+\begin{center}
+\resizebox{0.5\textwidth}{!}
+{
+\begin{pspicture}(0,-3.5534375)(11.012813,3.5534375)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.9928125,2.5634375)(0.9928125,-3.4365625)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.9928125,2.5634375)(10.992812,2.5634375)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.9928124,2.5634375)(2.9928124,1.5634375)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.9928126,2.5634375)(4.9928126,0.5634375)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.9928126,2.5634375)(6.9928126,-0.9365625)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(8.992812,2.5634375)(8.992812,-3.2365625)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9223437,2.9684374){Pulsation (1 min)}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.95375,3.3684375){Variations (1h)}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.0021877,2.8684375){Diurnal variations (1d)}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.022187,3.2684374){Dst variations (4d)}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.46171874,-3.3315625){z (km)}
+\psline[linewidth=0.04cm](0.7928125,-2.4365625)(0.9928125,-2.4365625)
+\psline[linewidth=0.04cm](0.7928125,-0.4365625)(0.9928125,-0.4365625)
+\psline[linewidth=0.04cm](0.7928125,1.5634375)(0.9928125,1.5634375)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.5453125,1.5684375){10}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4353125,-0.4315625){100}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.3253125,-2.4315624){1000}
+\end{pspicture} 
+}
+\caption{Variations}
+\label{fig:em04}
+\end{center}
+\end{figure}
+
+
+HERE LECTURE FROM 30.11.2015!!!!
+
+%
+%\subsubsection*{Solution for the homogeneous halfspace}
+%
+%1) Solution for TE-source fields $\rightarrow E_z=0$:
+%
+%Eq. 3.13. $z>0$
+%
+%\begin{align*}
+%\hat{E}_x=A_xe^{-kz}+B_xe^{kz}\\
+%\hat{E}_y=A_ye^{-kz}+B_ye^{kz}\\
+%\hat{B}_x=\frac{1}{i\omega}\frac{d\hat{E}_y}{dz}\\
+%\hat{B}_y=\frac{1}{i\omega}\frac{d\hat{E}_x}{dz}\\
+%\hat{B}_z=\frac{1}{i\omega}\left(k_y\hat{E}_x-k_x\hat{E}_y\right)
+%
+%
+%\end{align*}
+
+
+\subsubsection*{Continuity-Equation}
+For $z=-0$: $E_x=a_x+b_x$ and $B_y=\frac{k_0}{i\omega}(a-b)$
+
+and $z=0$: $E_x=A_x$ and $B_y=\frac{k}{i\omega}A_x$
+
+Considering the continuity of the tangential $\vec{E}$ and $\vec{B}$:
+
+\begin{align*}
+\rightarrow A=a+b &&\textrm{and}&& KA=k_0(a-b)
+\end{align*}
+
+$E_x$ and $E_y$ are continous functions, therefore $B_z$ is also continious. Forming:
+
+\begin{align*}
+ae^{-\alpha}=a(\cosh(\alpha)-\sinh(\alpha))\\
+be^{\alpha}=b(\cosh(\alpha)+\sinh(\alpha))\\
+\Rightarrow ae^{-\alpha}+be^{\alpha}=\underbrace{(a+b)}_{A}\cosh(\alpha)+\underbrace{(b-a)}_{-kA/k_0}\sinh(\alpha)
+\end{align*}
+
+Using eq. 3.15
+
+\begin{tabularx}{\textwidth}{c|c}
+$-H<z<0$ &$z>0$ \\
+\hline
+$\hat{E}_x=A_x(\cosh(k_0z)-\frac{k}{k_0}\sinh(k_0z))$ & $=A_xe^{-kz}$ \\
+$\hat{E}_y=A_y(\cosh(k_0z)-\frac{k}{k_0}\sinh(k_0z))$ & $=A_ye^{-kz}$ \\
+$\hat{B}_x=\frac{-A_y}{i\omega}(k\cosh(k_0z)-k_0\sinh(k_0z))$ & $=\frac{-k}{i\omega} A_ye^{-kz}$ \\
+$\hat{B}_y=\frac{-A_x}{i\omega}(k\cosh(k_0z)-k_0\sinh(k_0z))$ & $=\frac{-k}{i\omega} A_xe^{-kz}$ \\
+$\hat{B}_z=\frac{1}{\omega}(k_yA_x-k_xA_y)(k\cosh(k_0z)-k_0\sinh(k_0z))$ & $=\frac{1}{\omega}(k_y A_x-k_xA_y)e^{-kz}$
+\end{tabularx}
+
+For the quasi-homogeneous diffusive fields for $z>0$ with $\rho k\ll 1$ and $k=\frac{1+i}{\rho}$
+\begin{align*}
+E_x=\underbrace{Ae^{-z/\rho}}_{reduction of the amplitude}\underbrace{\left(\cos(z/\rho)-\sin(z/\rho)\right)}_{rotation of phase}
+\end{align*}
+
+\begin{figure}[h!]
+\begin{center}
+\resizebox{0.5\textwidth}{!}
+{
+\begin{pspicture}(0,-3.8992188)(20.082813,3.9192188)
+\psline[linewidth=0.04cm](2.9809375,3.1207812)(2.9809375,-0.9792187)
+\psline[linewidth=0.04cm](2.9809375,1.1207813)(8.980938,1.1207813)
+\psbezier[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm](3.2809374,-0.9792187)(3.3809376,0.82078123)(5.0809374,3.1207812)(8.980938,3.1207812)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.5579689,1.2257812){0}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.3323438,-0.87421876){$\rho$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0623436,-0.87421876){$1/e$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9523437,3.0257812){$|\hat{E}_x(z)/\hat{E}(0)|$}
+\psline[linewidth=0.04cm](11.780937,3.1207812)(11.780937,-0.9792187)
+\psline[linewidth=0.04cm](11.780937,1.1207813)(17.780937,1.1207813)
+\psbezier[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm](12.280937,1.2207812)(10.280937,3.6207812)(12.380938,-3.8792188)(16.480938,1.1207813)
+\usefont{T1}{ptm}{m}{n}
+\rput(11.132343,-0.87421876){$\rho$}
+\usefont{T1}{ptm}{m}{n}
+\rput(18.052343,3.7257812){$|\hat{E}_x(z)/\hat{E}(0)|$}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.475625,3.3257813){Im}
+\usefont{T1}{ptm}{m}{n}
+\rput(18.372656,0.8257812){Re}
+\usefont{T1}{ptm}{m}{n}
+\rput(14.1925,0.8257812){0.5}
+\usefont{T1}{ptm}{m}{n}
+\rput(14.027813,-0.77421874){1}
+\usefont{T1}{ptm}{m}{n}
+\rput(16.783438,0.92578125){1.0}
+\usefont{T1}{ptm}{m}{n}
+\rput(16.3825,0.22578125){0.25}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.361875,1.6257813){4}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.559531,0.72578126){2}
+\end{pspicture} 
+}
+\caption{Skin effect spiral for homogeneous half space and quasi homogenous fields}
+\label{fig:em0111}
+\end{center}
+\end{figure}
+
+\subsubsection*{Sounding of the halfspace relating to $\rho$ using the observed fields at the earth surface $z=0$}
+
+$\hat{E}_x=A_x$, $\hat{E}_y=A_y$, $\hat{B}_x=\frac{-k}{i\omega}A_y$, $\hat{B}_y=\frac{-k}{i\omega}A_x$, ...
+
+Introducing the complex [enetration depth:
+
+\begin{align}
+C(k,\omega)=k^{-1}=\frac{\rho}{2}(1-i) && for |C|k\ll 1, \lambda \gg |C|
+\end{align}
+
+Determining of $c$: 
+
+$\hat{E}_x=i\omega C \hat{B}_y$, $\hat{E}_y=-i\omega C \hat{B}_x$, $z_{xy}=\frac{E_x}{B_y}$ - Magnetotelluric Sounding
+
+$B_z=C (i k_x\hat{B}_x+i k_y\hat{B}_y)$ from the $z-H$-ratio - Geomagnetic Depth Sounding
+
+
+Determination of $\rho$ form $C$ for a given wave number and frequency:
+
+Is $|C|k\ll 1$ and $|C|^2=\rho^2/2=\frac{\rho}{\omega\mu_0}$ (using the Skin depth). Then formal: $k=0$.
+
+\begin{align*}
+\rho=\omega\mu_0|C|^2=\frac{\mu_0}{\omega}|z|^2
+\end{align*}
+with $z=z_{xz} or z_{yx}$ and $\mu_0/\omega=0.2$T for $E$ in [mV/km] and $B$ in [nT].
+
+\subsubsection*{Example: MT-Sounding in Bramwald}
+
+\begin{figure}[h!]
+\begin{center}
+Figure MT BRamwald 
+\caption{Example Sounding curves}
+\label{fig:emexample01}
+\end{center}
+\end{figure}
+
+
+$|C|=\frac{1}{\omega}\frac{E_x}{B_y}=\frac{2000s}{2\pi}\frac{10\cdot 10^{-6}V/m}{20\cdot 10^{-9}Vs/m^2}=160$km
+
+$\rho=0.2\cdot 2000 \left(\frac{10}{20}\right)^2=100 \Omega m$
+
+
+Global GDS with Sq:
+
+\begin{figure}[h!]
+\begin{center}
+Figure MT GDS
+\caption{Example Sounding curves GDS}
+\label{fig:emexample2}
+\end{center}
+\end{figure}
+
+$\lambda/2=2\pi R_E/4=10000km$, $k_y=2\pi/20000\approx 1/3000 km^{-1}$
+
+$|C|=B_z/(k_yB_y)=750 km$ for $T=1d$.
+
+\subsubsection*{2) Solution for tangential magnetic source fields by meridional currrents}
+
+$\Rightarrow$ induced currents are also meridional $\Rightarrow B_z=0$
+
+
+\begin{figure}
+ \begin{center}
+ \resizebox{0.6\textwidth}{!}
+ {
+\begin{pspicture}(0,-2.098125)(4.7128124,2.098125)
+\psline[linewidth=0.04cm](0.6928125,0.8196875)(4.6928124,0.8196875)
+\psline[linewidth=0.04cm](0.6928125,-1.1803125)(4.6928124,-1.1803125)
+\psellipse[linewidth=0.04,dimen=outer](2.6928124,1.5196875)(1.3,0.5)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.3,1.9246875){B}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.3159375,0.8246875){H}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.2528125,-1.1753125){z=0}
+\psellipse[linewidth=0.04,dimen=outer](2.7428124,-1.7303125)(0.15,0.15)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.8142188,-1.8753124){$\sigma$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.5942187,-0.2753125){$\sigma_0$}
+\end{pspicture} 
+}
+ \caption{asdf}
+ \label{fig:em002}
+ \end{center}
+ \end{figure} 
+ 
+ Solution of
+ \begin{align*}
+ \frac{d^2 \hat{B}_x}{dz^2}&=k^2\hat{B}_x && in~~z>0\\
+ &=k_0^2 && in~~H<z<0
+ \end{align*}
+ \begin{align*}
+ \hat{B}_x=\begin{cases}
+ ae^{-k_0z}+be^{k_0z}\\
+ Ae^{-kz}
+ \end{cases}
+ \end{align*}
+ Derivation of $\tilde{\vec{E}}$ from $\nabla\times\tilde{\vec{B}}$:
+ 
+ \begin{align*}
+ \nabla\times\tilde{\vec{B}}=\mu_0\sigma^\star\tilde{\vec{E}}
+ \end{align*}
+ with 
+ \begin{align*}
+ \sigma^\star=\begin{cases}
+ \sigma_0(1+i\omega C_0), C_0=\frac{\epsilon\epsilon_0}{\sigma_0}\\
+ \sigma
+ \end{cases}
+ \end{align*}
+ 
+ \begin{align*}
+ \hat{E}_x&=\frac{-1}{\mu_0\sigma^\star}\frac{d\hat{B}_y}{dz}\\
+ \hat{E}_y&=\frac{1}{\mu_0\sigma^\star}\frac{d\hat{B}_x}{dz}\\
+ \hat{E}_z&=\frac{1}{\mu_0\sigma^\star}(ik_y\hat{B}_x-ik_x\hat{B}_y)
+ \end{align*}
+ 
+ \textbf{Continuity of $\mathbf{B_{x,y}}$ and $\mathbf{E_{x,y}}$ for $\mathbf{z=0}$:}
+ 
+ $A=a+b$, and 
+ 
+ \begin{equation}
+ KA/\sigma=\frac{k_0(a-b)}{\sigma_0(1+i\omega C_0)}
+ \end{equation}
+ 
+or
+
+\begin{align*}
+a-b=\gamma\frac{k}{k_0}A 
+\end{align*}
+with $\gamma=\frac{\sigma_0(1+i\omega C_0)}{\sigma}$.
+
+Similar to eq. 3.17, full solution:
+
+\begin{align*}
+\hat{B_x}=A_x\begin{cases}
+\cosh(k_0z)-\gamma\frac{k}{k_0}\sinh(k_0z) ~~~, z<0\\
+e^{-kz} ~~~,z>0
+\end{cases}
+\end{align*}
+\begin{align*}
+\hat{E}_y=\frac{-A_x}{\mu_0\sigma}\begin{cases}
+k\cosh(k_0z)-\frac{k_0}{\gamma}\sinh(k_0z) ~~~, z<0\\
+ke^{-kz} ~~~,z>0
+\end{cases}
+\end{align*}
+
+For $z=0$ (earth surface):
+
+\begin{align*}
+\hat{B}_x=A_x && \hat{B}_y=A_y\\
+\hat{E}_x=\frac{k}{\mu_0\gamma}A_y && \hat{E}_y=\frac{k}{\mu_0\gamma}A_x\\
+\hat{E}_z=\frac{1}{\mu_0\sigma^\star}(ik_yA_x-ik_yA_y)
+\end{align*}
+We form the admittance $B_x/E_y$ ratio considering the complex penetration depth $C=k^{-1}$.
+
+\begin{align*}
+\hat{B}_x=-\mu_0\sigma C\hat{E}_y\\
+\hat{B}_y=\mu_0\sigma C\hat{E}_x\\
+\hat{E}_z=C(ik_x\hat{E}_x+ik_y\hat{E}_y)\begin{cases}
+1/\gamma ~~~ z=-0\\
+1 ~~~ z=+0
+\end{cases}
+\end{align*}
+
+Approximation for quasi-homogenous TM-fields, if $\rho k \ll 1$: $k_0=k$ and $k=\sqrt{i\omega\mu_0\sigma}$
+
+\begin{enumerate}
+\item 
+\begin{align*}
+\gamma=\begin{cases}
+\frac{\sigma_0}{\sigma} ~~~for~~ T\gg C_0\\
+\frac{i\omega\epsilon\epsilon_0}{\sigma}=-\frac{\omega^2\mu_0\epsilon\epsilon_0}{i\omega\mu_0\sigma}=-\left(\frac{k_E}{k}\right)^2 ~~~ for~~T\ll C_0
+\end{cases}
+\end{align*}
+
+\item
+\begin{align*}
+\mu_0\sigma C=\frac{i\omega\mu_0\sigma C}{i\omega}=\frac{1}{i\omega C}
+\end{align*}
+
+$\Rightarrow$
+\begin{align}
+\hat{E}_x=i\omega C \hat{B}_y
+\end{align}
+Impedance of the surface fields does not depend on mode of the source field. Same sounding curves will be valid as derived from TE-source fields .
+
+\end{enumerate}
+
+
+
+\subsubsection*{For the TE-source fields in the air}
+
+$\nabla\times\vec{B}=0$ (see eq. 3.8) and $\vec{B}=-\nabla h$
+
+\textbf{Potential equation:} 
+
+\begin{align*}
+\frac{\partial^2 U}{\partial x^2}+\frac{\partial^2 U}{\partial y^2}+\frac{\partial^2 U}{\partial z^2}=0\\
+FT \rightarrow -k^2\hat{U}+\frac{d^2\hat{U}}{dz^2}=0
+\end{align*}
+in $-H<z<0$
+
+Solution:
+\begin{align*}
+\hat{U}(z)=Ee^{-kz}+Ie^{kz} ~~~,~k=\sqrt{k_x^2+k_y^2}
+\end{align*}
+with $E$ the potential coefficients of the external field part and $I$ of the internal respectively.
+
+Then
+
+\begin{align*}
+\hat{B}_x=-\frac{\partial \hat{U}}{\partial x}\rightarrow \hat{B}_x&=-ik_x(Ee^{-kz}+Ie^{kz})\\
+\hat{B}_y&=-ik_y(Ee^{-kz}+Ie^{kz})\\
+\hat{B}_z&=-ik(Ee^{-kz}-Ie^{kz})
+\end{align*}
+
+Tendency (see chapter 1): For horizontal components: addition of internal and external part. For the vertical component subtraction of internal from external.
+
+
+Comparison with the "air solution" ($-H<z<0$) eq. 3.17 for $K_0=k$
+
+\begin{align*}
+\hat{B}_x&=-\frac{A_y}{i\omega}(k\cosh(kz)-k\sinh(kz))\\
+&=-\frac{A_y}{2i\omega}((k+k)e^{-kz}+(k-k)e^{kz})
+\end{align*}
+(using $ae^{-\alpha}+be^\alpha=(a+b)\cosh\alpha+(b-a)\sinh\alpha$).
+
+\begin{align}
+\Rightarrow E&=\frac{-A_y}{2\omega k_x}(K+k)\\
+I&=\frac{-A_y}{2\omega k_y}(K-k)
+\end{align}
+Additional parameters for quasi-homogeneous source fields:
+\begin{align}
+Q(k,\omega)=\frac{I(k,\omega)}{E(k,\omega)}=\frac{K-k}{K+k}=\frac{1-kC(k,\omega)}{1+kC(k,\omega)}
+\end{align}
+
+\textbf{In summary:} Sounding on the Earth's surface using 
+
+\textbf{MT-impedance}:
+\begin{equation*}
+z(\omega,k)=i\omega C(k,\omega):\hat{E}_x=z\hat{B}_y, \hat{E}_y=-z\hat{B}_x
+\end{equation*}
+
+\textbf{GDS:z-H-ratio}:
+\begin{align*}
+\hat{B}_z=ikB_y\frac{k}{k_y}=ikCB_y\frac{k}{k_y}
+\end{align*}
+
+\textbf{GDS} $\mathbf{ Q(\omega,k)}$:
+
+\begin{align*}
+Q(\omega,k)=\frac{1-kCQ(\omega,k)}{1+kCQ(\omega,k)}\Rightarrow I=\frac{1-kC}{1+kC}E
+\end{align*}
+

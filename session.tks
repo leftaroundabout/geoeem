@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TexmakerSession quickmode="3">
-    <document hasfocus="false" master="true" line="18" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/main.tex" bookmark3="0"/>
-    <document hasfocus="true" master="false" line="674" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/sections/03_dc.tex" bookmark3="0"/>
+    <document hasfocus="false" master="false" line="1160" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/sections/03_dc.tex" bookmark3="0"/>
+    <document hasfocus="false" master="false" line="655" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/sections/04_em.tex" bookmark3="0"/>
+    <document hasfocus="false" master="true" line="53" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/main.tex" bookmark3="0"/>
+    <document hasfocus="true" master="false" line="1" bookmark1="0" bookmark2="0" file="/home/felix/Dropbox/Master/GEOEEM/Latex/sections/05_induction.tex" bookmark3="0"/>
 </TexmakerSession>

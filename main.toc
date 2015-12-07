@@ -13,3 +13,17 @@
 \contentsline {paragraph}{\numberline {2.1.5.1}Basic Equations of the linear filter method: The fast HANKEL-transformation}{13}{paragraph.2.1.5.1}
 \contentsline {paragraph}{\numberline {2.1.5.2}Calculation of a filter}{15}{paragraph.2.1.5.2}
 \contentsline {paragraph}{\numberline {2.1.5.3}Example of a resistivity filter}{16}{paragraph.2.1.5.3}
+\contentsline {subsection}{\numberline {2.2}Principle of equivalence}{16}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Interpretation of resistivity data: Inversion}{17}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Strategies for the inversion}{17}{subsubsection.2.3.1}
+\contentsline {paragraph}{\numberline {2.3.1.1}Trial and Error}{17}{paragraph.2.3.1.1}
+\contentsline {paragraph}{\numberline {2.3.1.2}ZOHDY-technique}{17}{paragraph.2.3.1.2}
+\contentsline {paragraph}{\numberline {2.3.1.3}Inversion by linearization of the forward operator}{18}{paragraph.2.3.1.3}
+\contentsline {subsection}{\numberline {2.4}Solution of the 2D DC forward problem}{19}{subsection.2.4}
+\contentsline {section}{\numberline {3}Electromagnetic induction}{20}{section.3}
+\contentsline {subsection}{\numberline {3.1}Principle of EM-induction as an example of transformer}{20}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Induction in the conductive subsurface}{21}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Basic Elements}{21}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Notation and units}{21}{subsubsection.3.3.1}
+\contentsline {section}{\numberline {4}Induction in 1D-Earth models}{26}{section.4}
+\contentsline {subsection}{\numberline {4.1}Layered models}{26}{subsection.4.1}
