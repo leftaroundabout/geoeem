@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  7 DEC 2015 11:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.6)  7 DEC 2015 12:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -929,13 +929,9 @@ File: figs/Dipoldipol.png Graphic file (type png)
 <use figs/Dipoldipol.png>
 Package pdftex.def Info: figs/Dipoldipol.png used on input line 53.
 (pdftex.def)             Requested size: 241.84843pt x 70.49193pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <./main-pics.pdf> <./main-pics.pdf>] [4 <./figs/Wenner.png (PNG copy)> <./fi
-gs/Schlumberger.png (PNG copy)> <./figs/Dipoldipol.png (PNG copy)>]
-<main-pics.pdf, id=198, page=3, 297.11pt x 115.43124pt>
+ [3 <./main-pics.pdf> <./main-pics.pdf>] [4 <./figs/Wenner.png (PNG copy)> <./f
+igs/Schlumberger.png (PNG copy)> <./figs/Dipoldipol.png (PNG copy)>] <main-pics
+.pdf, id=198, page=3, 297.11pt x 115.43124pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 3>
@@ -973,9 +969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--263
 []$[]$   $[]$
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[6 <./figs/grenz.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\hbox' on input line 265.
@@ -996,18 +990,14 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\@@italiccorr' on input line 265.
 
-<main-pics.pdf, id=246, page=7, 175.65625pt x 170.6375pt>
+<main-pics.pdf, id=264, page=7, 175.65625pt x 170.6375pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 7>
 Package pdftex.def Info: main-pics.pdf, page7 used on input line 305.
 (pdftex.def)             Requested size: 175.6558pt x 170.63707pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./figs/grenz.pdf>] [7 <./main-pics.pdf> <./main-pics.pdf> <./main-pics.pdf>
-] <main-pics.pdf, id=325, page=8, 242.9075pt x 179.67125pt>
+ [7 <./main-pics.pdf> <./main-pics.pdf> <./main-pics.pdf>] <main-pics.pdf, id=3
+25, page=8, 242.9075pt x 179.67125pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 8>
@@ -1033,12 +1023,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 542.
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 556--557
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
@@ -1048,20 +1038,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
 
-<main-pics.pdf, id=419, page=9, 114.4275pt x 49.18375pt>
+<main-pics.pdf, id=418, page=9, 114.4275pt x 49.18375pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 9>
 Package pdftex.def Info: main-pics.pdf, page9 used on input line 616.
 (pdftex.def)             Requested size: 114.42722pt x 49.18361pt.
-
-<main-pics.pdf, id=420, page=10, 334.24875pt x 139.52126pt>
+ [12]
+<main-pics.pdf, id=429, page=10, 334.24875pt x 139.52126pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 10>
 Package pdftex.def Info: main-pics.pdf, page10 used on input line 653.
 (pdftex.def)             Requested size: 334.24792pt x 139.5209pt.
- [12 <./main-pics.pdf>] [13 <./main-pics.pdf>]
+ [13 <./main-pics.pdf> <./main-pics.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 712--713
 
  []
@@ -1071,26 +1061,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 732--733
 
  []
 
-[14] [15] <main-pics.pdf, id=504, page=11, 317.185pt x 71.26625pt>
+[14] [15] <main-pics.pdf, id=503, page=11, 317.185pt x 71.26625pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 11>
 Package pdftex.def Info: main-pics.pdf, page11 used on input line 873.
 (pdftex.def)             Requested size: 317.1842pt x 71.26605pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+ [16]
 
 LaTeX Warning: File `invidea.eps' not found on input line 923.
 
-<main-pics.pdf, id=505, page=12, 1538.58812pt x 1538.67854pt>
+<main-pics.pdf, id=510, page=12, 1538.58812pt x 1538.67854pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 12>
@@ -1101,87 +1082,64 @@ Overfull \hbox (1054.8875pt too wide) in paragraph at lines 923--924
  [] 
  []
 
+[17 <./main-pics.pdf>]
+Overfull \vbox (877.31084pt too high) has occurred while \output is active []
 
-LaTeX Warning: Float too large for page by 844.03894pt on input line 927.
 
-[16]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<main-pics.pdf, id=511, page=13, 245.91875pt x 147.55125pt>
+[18 <./main-pics.pdf>]
+<main-pics.pdf, id=534, page=13, 245.91875pt x 147.55125pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 13>
-Package pdftex.def Info: main-pics.pdf, page13 used on input line 971.
+Package pdftex.def Info: main-pics.pdf, page13 used on input line 972.
 (pdftex.def)             Requested size: 245.91814pt x 147.55087pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<main-pics.pdf, id=512, page=14, 399.4925pt x 138.5175pt>
+<main-pics.pdf, id=535, page=14, 399.4925pt x 138.5175pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 14>
-Package pdftex.def Info: main-pics.pdf, page14 used on input line 1024.
+Package pdftex.def Info: main-pics.pdf, page14 used on input line 1026.
 (pdftex.def)             Requested size: 399.49152pt x 138.51715pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17 <./main-pics.pdf>] [18]
-<main-pics.pdf, id=548, page=15, 362.35374pt x 87.32625pt>
+ [19 <./main-pics.pdf>] [20 <./main-pics.pdf>]
+<main-pics.pdf, id=597, page=15, 362.35374pt x 87.32625pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 15>
-Package pdftex.def Info: main-pics.pdf, page15 used on input line 1122.
+Package pdftex.def Info: main-pics.pdf, page15 used on input line 1124.
 (pdftex.def)             Requested size: 362.35286pt x 87.32603pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[19]
-Overfull \hbox (51.6398pt too wide) in paragraph at lines 1173--1173
+ [21 <./main-pics.pdf>]
+Overfull \hbox (51.6398pt too wide) in paragraph at lines 1175--1175
 [] 
  []
 
-<main-pics.pdf, id=565, page=16, 245.91875pt x 155.58125pt>
+<main-pics.pdf, id=628, page=16, 245.91875pt x 155.58125pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 16>
-Package pdftex.def Info: main-pics.pdf, page16 used on input line 1231.
+Package pdftex.def Info: main-pics.pdf, page16 used on input line 1233.
 (pdftex.def)             Requested size: 245.91814pt x 155.58086pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (./sections/04_em.tex
-<main-pics.pdf, id=566, page=17, 146.5475pt x 132.495pt>
+ [22]) (./sections/04_em.tex
+<main-pics.pdf, id=639, page=17, 146.5475pt x 132.495pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 17>
 Package pdftex.def Info: main-pics.pdf, page17 used on input line 26.
 (pdftex.def)             Requested size: 146.54712pt x 132.49466pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[20] <main-pics.pdf, id=575, page=18, 146.5475pt x 91.34125pt>
+<main-pics.pdf, id=640, page=18, 146.5475pt x 91.34125pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 18>
 Package pdftex.def Info: main-pics.pdf, page18 used on input line 57.
 (pdftex.def)             Requested size: 146.54712pt x 91.34102pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<main-pics.pdf, id=576, page=19, 199.74625pt x 217.81375pt>
+ [23 <./main-pics.pdf> <./main-pics.pdf>]
+<main-pics.pdf, id=677, page=19, 199.74625pt x 217.81375pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 19>
 Package pdftex.def Info: main-pics.pdf, page19 used on input line 108.
 (pdftex.def)             Requested size: 199.74576pt x 217.8132pt.
- [21]
+ [24 <./main-pics.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
@@ -1196,72 +1154,62 @@ Overfull \hbox (87.95589pt too wide) in alignment at lines 183--183
 [][][][] 
  []
 
-<main-pics.pdf, id=583, page=20, 443.6575pt x 245.91875pt>
+[25 <./main-pics.pdf>]
+<main-pics.pdf, id=717, page=20, 443.6575pt x 245.91875pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 20>
 Package pdftex.def Info: main-pics.pdf, page20 used on input line 254.
 (pdftex.def)             Requested size: 443.6564pt x 245.91814pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<main-pics.pdf, id=584, page=21, 315.1775pt x 201.75375pt>
+<main-pics.pdf, id=718, page=21, 315.1775pt x 201.75375pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 21>
 Package pdftex.def Info: main-pics.pdf, page21 used on input line 292.
 (pdftex.def)             Requested size: 315.17673pt x 201.75325pt.
-
+ [26 <./main-pics.pdf> <./main-pics.pdf>]
 Underfull \hbox (badness 10000) in alignment at lines 348--348
 [][] 
  []
 
-[22] <main-pics.pdf, id=593, page=22, 517.935pt x 143.53625pt>
+<main-pics.pdf, id=753, page=22, 517.935pt x 143.53625pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 22>
 Package pdftex.def Info: main-pics.pdf, page22 used on input line 395.
 (pdftex.def)             Requested size: 517.93372pt x 143.53589pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<main-pics.pdf, id=594, page=23, 135.50626pt x 115.43124pt>
+ [27 <./main-pics.pdf>]
+<main-pics.pdf, id=784, page=23, 135.50626pt x 115.43124pt>
 File: main-pics.pdf Graphic file (type pdf)
 
 <use main-pics.pdf, page 23>
 Package pdftex.def Info: main-pics.pdf, page23 used on input line 482.
 (pdftex.def)             Requested size: 135.5059pt x 115.43095pt.
- [23] [24] [25]) (./sections/05_induction.tex)
+ [28 <./main-pics.pdf>] [29])
+(./sections/05_induction.tex [30])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 55.
-
-[26] [27 <./main-pics.pdf>] [28 <./main-pics.pdf> <./main-pics.pdf> <./main-pic
-s.pdf> <./main-pics.pdf>] [29 <./main-pics.pdf> <./main-pics.pdf> <./main-pics.
-pdf>] [30 <./main-pics.pdf> <./main-pics.pdf> <./main-pics.pdf>] [31 <./main-pi
-cs.pdf>]
+ [31]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 55.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 55.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 55.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 97A0DA18AB836C09FF0F9AC0AED85518;1838.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 55.
  ) 
 Here is how much of TeX's memory you used:
- 11865 strings out of 494935
- 175936 string characters out of 6178122
- 309539 words of memory out of 5000000
- 14651 multiletter control sequences out of 15000+600000
+ 11862 strings out of 494935
+ 175880 string characters out of 6178122
+ 300405 words of memory out of 5000000
+ 14650 multiletter control sequences out of 15000+600000
  12319 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 59i,16n,94p,451b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,16n,94p,451b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -1278,10 +1226,10 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (32 pages, 535891 bytes).
+Output written on main.pdf (32 pages, 535550 bytes).
 PDF statistics:
- 932 PDF objects out of 1000 (max. 8388607)
- 756 compressed objects within 8 object streams
- 215 named destinations out of 1000 (max. 500000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 754 compressed objects within 8 object streams
+ 213 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
