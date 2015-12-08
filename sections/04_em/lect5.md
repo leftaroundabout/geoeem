@@ -21,7 +21,7 @@ $\nabla\times\Magn$   | $\mu_0\jCurr$   | $\mu_0\jCurr$  | $\mu_0\epsilon\epsilo
 $\nabla\times\Elct$   | $0$             | $-\dot\Magn$   | $-\dot\Magn$
 
 
-General Maxwell equations for $\Elct$ and $\Magn$ as field quantities
+General Maxwell equations for electric and magnetic field quantities
 ---
 
 $$(2.3a)
@@ -187,7 +187,7 @@ $$
   \nabla\times\tilde\Elct = -i\omega\tilde\Magn
 $$
 $$
-  \nabla\times\tilde\Elect
+  \nabla\times\tilde\Elct
     = \left( \partial_y\tilde E\rmsc{z} - \partial_z \tilde E\rmsc{y} \right) \unitV{x}
     + \left( \partial_z\tilde E\rmsc{x} - \partial_x \tilde E\rmsc{z} \right) \unitV{y}
     + \left( \partial_x\tilde E\rmsc{y} - \partial_y \tilde E\rmsc{x} \right) \unitV{z}
