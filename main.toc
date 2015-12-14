@@ -1,0 +1,36 @@
+\select@language {english}
+\contentsline {section}{\numberline {0}Introduction}{2}{section.0}
+\contentsline {subsection}{\numberline {0.1}Classification of methods}{2}{subsection.0.1}
+\contentsline {section}{\numberline {1}Conductivity}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Mechanisms of electrical conductivity}{3}{subsection.1.1}
+\contentsline {section}{\numberline {2}DC-resistivity method}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Basic equations of DC-resistivity}{4}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Potential of a current electrode}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Potential distribution at the surface of a horizontally stratified earth (Solution of the Laplace equation \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:lapleq}\unskip \@@italiccorr )}})}{7}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Derivation of a formula for the apparent resistivity}{11}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Calculation of the resistivity transform $T(\lambda )$}{12}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Solution of the Stefanescu-Integral}{13}{subsubsection.2.1.5}
+\contentsline {paragraph}{\numberline {2.1.5.1}Basic Equations of the linear filter method: The fast HANKEL-transformation}{13}{paragraph.2.1.5.1}
+\contentsline {paragraph}{\numberline {2.1.5.2}Calculation of a filter}{15}{paragraph.2.1.5.2}
+\contentsline {paragraph}{\numberline {2.1.5.3}Example of a resistivity filter}{16}{paragraph.2.1.5.3}
+\contentsline {subsection}{\numberline {2.2}Principle of equivalence}{16}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Interpretation of resistivity data: Inversion}{18}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Strategies for the inversion}{19}{subsubsection.2.3.1}
+\contentsline {paragraph}{\numberline {2.3.1.1}Trial and Error}{19}{paragraph.2.3.1.1}
+\contentsline {paragraph}{\numberline {2.3.1.2}ZOHDY-technique}{19}{paragraph.2.3.1.2}
+\contentsline {paragraph}{\numberline {2.3.1.3}Inversion by linearization of the forward operator}{20}{paragraph.2.3.1.3}
+\contentsline {subsection}{\numberline {2.4}Solution of the 2D DC forward problem}{21}{subsection.2.4}
+\contentsline {section}{\numberline {3}Electromagnetic induction}{23}{section.3}
+\contentsline {subsection}{\numberline {3.1}Principle of EM-induction as an example of transformer}{23}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Induction in the conductive subsurface}{24}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Basic Elements}{24}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Notation and units}{24}{subsubsection.3.3.1}
+\contentsline {section}{\numberline {4}Basic equations for EM methods}{26}{section.4}
+\contentsline {subsection}{\numberline {4.1}General Maxwell equations for electric and magnetic field quantities}{27}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Fourier transform of the field quantities}{27}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Example: oscillating current in height $H=300\mathrm {km}$}{28}{subsection.4.3}
+\contentsline {section}{\numberline {5}Induction in homogeneous half space}{29}{section.5}
+\contentsline {section}{\numberline {6}Induction in 1D-Earth models}{34}{section.6}
+\contentsline {subsection}{\numberline {6.1}Layered models}{34}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Transfer functions for time-dependent fields}{37}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Complex penetration depth $C$ for simple conductivities}{39}{subsection.6.3}
