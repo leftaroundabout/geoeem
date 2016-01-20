@@ -1,0 +1,187 @@
+\setcounter{section}{1}\addtocounter{section}{-1}\section{Field station }
+
+\begin{itemize}
+\tightlist
+\item
+  3 component magnetometer
+\item
+  For long periods \(10^{-6}-1 \physu{Hz}\) use of flux gate
+  magnetometers
+\item
+  For short periods \(10^{-3}-10^3 \physu{Hz}\) use induction coil
+  magnetometers
+\item
+  Non-polarizable electrodes
+\item
+  e.g.~Ag-AgCl have nearly no disturbing potential
+\end{itemize}
+
+\setcounter{section}{2}\addtocounter{section}{-1}\section{Analysis of MT time series }
+
+Overview of different steps:
+
+Choice of sensors \(\to\) Observation \(\to\) Pretreatment of time
+series in time domain \(\to\) Transform the data to frequency domain
+\(\to\) Response curve \(\to\) Power spectra, stacking \(\to\)
+Calculation of the transfer functions
+(\(Z_{xx}, Z_{xy}, Z_{yx}, Z_{yy}, T_x, T_y\))
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Choice of the frequency range and magnetometer: indution coil or flux
+  gate? Determination of the sampling interval \(\Delta t\)
+\item
+  Observation. Measure \(E_x(t)\), \(E_y(t)\), \(H_x(t)\), \(H_y(t)\),
+  \(H_z(t)\)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Period: 1 d \ldots{} 1 yr
+  \item
+    Digitalisation \(H(t_j) \to x_j\), \(E(t_j) \to z_j\)
+  \end{itemize}
+\item
+  Choice of analysing intervals:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Intervals with strong magnetic activity but without visible noise
+  \item
+    Choose time intervals suitable for FFT
+  \end{itemize}
+\item
+  Data processing in time domain
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Determine the trend of each chosen time interval and substract it
+  \item
+    Numerical filter
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Aim: distinguish or emphasize suitable frequency bands
+    \item
+      Preparation for the frequency analysis
+      \[ y_n = \sum_{n'=-N}^{N} w_{n'}x_{n-n'} \] high pass, low pass
+      filters. Consider low pass filter, e.g.
+    \item
+      rectangle/sinc LP filter \[
+         \tilde{w}(\omega) = \begin{cases}
+                1   & |\omega|<\omega_0
+              (1/2  & |\omega|=\omega_0 )
+            \\  0   & \text{otherwise}.
+            \end{cases}
+       \] This has difficulties in practice due to strong oscillations
+      in the vicinity of cutoff frequency.
+    \item
+      Trapezoidal LP filter \[
+         \tilde{w}(\omega) = \begin{cases}
+                1   & 0<|\omega|<\omega_1
+              \frac{\omega_2-\omega}{\omega_2-\omega_1}
+                    & \omega_1 < |\omega| < \omega_2
+            \\  0   & \text{otherwise}.
+       \] The following quantities are introduced as filter parameters:
+      \[
+         \omega_0 = \tfrac12(\omega_1 + \omega_2)
+       \] \[
+         \Omega = \tfrac12(\omega_2 - \omega_1).
+       \] The \emph{steepness} of the filter is defined by \[
+         S = \frac{\omega_0}{\Omega}.
+       \] The filter function \(w(t)\) can be obtained by applying the
+      FT on \(\tilde{w}(\omega)\) \[
+         \omega(t) = \tfrac1\pi \int\limits_0^{\infty}\ttd{\omega} \tilde{w}\cos(\omega t)
+                   = \frac{\omega_0}{\phi}\frac{\sin(\omega_0 t)}{\omega_0t}
+                       \cdot\frac{\sin(\Omega t)}{\Omega t}.
+       \] The filter should have finite length, so define
+      \$\tilde{w}(\omega): \[
+         \tilde{w}_m(\omega) = \tilde{w}_0 + 2\sum_{n=1}^K w_n\cos(2\pinm/N)
+       \] with \[
+         \tilde{w}_0 = \frac{\omega_0}{\omega\rmsc{ny}}
+             \left(1 + 2\frac{\sin\alpha_n}{\alpha_n}\cdot\frac{\sin\beta_n}{\beta_n}\right)
+       \]
+    \item
+      Trapezoidal HP filter \[
+         \tilde{w}\rmsc{H} = 1 - \tilde{w}\rmsc{L}.
+       \] Instead of high pass, a polynomial equation can be applied.
+      (???) \[
+         y_n' = \frac{d}{T}(t - t_0 - \tfrac{\tau}{2})
+       \] with \(d = y(t_N) - y(t_0)\). The analysis can be realized in
+      small and overlapping frequency ranges. Example of typical filter
+      parameters
+    \item
+      Magnetic storm, \(T = 8\physu{d}\). \(\Delta t\sim 1 h\). Low pass
+      \(0.75\physu{cpd}\), polynomial high pass.
+    \item
+      Day variation, \(T = 1\physu{d}\). \(\Delta t\sim 1 h\). Low pass
+      \(4\physu{cpd}\), polynomial high pass.
+    \item
+      Variations, \(T = 6\physu{h}\). \(\Delta t\sim 1 \physu{min}\).
+      Low pass \(2\physu{cpd}\), polynomial high pass.
+    \item
+      Variations, \(T = 6\physu{h}\). \(\Delta t\sim 1 \physu{min}\).
+      Low pass \(6\physu{cpd}\), high pass \(0.5\physu{cpd}\).
+    \item
+      Variations, \(T = 6\physu{h}\). \(\Delta t\sim 1 \physu{min}\).
+      Low pass \(15\physu{cpd}\), high pass \(1.5\physu{cpd}\).
+    \end{itemize}
+  \end{itemize}
+\item
+  Data processing in frequency domain
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Harmonic analysis of the filtered time series \[
+       x_j , j\in\{0\ldots N\}
+        \Rightarrow \tilde{X}_m, m\in\{0\ldots M/2\}
+     \] Outcome: raw spectra. \[
+       x_j = \sum_{m=0}^{M} (a_m\cos(m\phi_j) + b_m\sim(m\phi_j) + S x_j
+     \] with \(\phi_j = \frac{2\pi j}{N}\). \[
+       a_m = \frac{2}N \sum_{j=0}^{N-1} x_j\cos(m\phi_j)
+     \] \[
+       b_m = \frac{2}N \sum_{j=0}^{N-1} x_j\sin(m\phi_j)
+     \] \[
+       a_0 = \tfrac1N \sum_{j=0}^{N-1} x_j
+     \] \[
+       a_M = \tfrac1N \sum_{j=0}^{N-1} x_j(-1)^j
+     \] The corresponding frequency \[
+       \omega_m = \frac{2\pi}{T} = \frac{\pi}\Delta
+     \] is called the Nyqvist frequency. The analysis for
+    \(\omega > \omega_M\) is not unique, we get \emph{aliasing}. In the
+    harmonic analysis only those frequencies are considered which are
+    less than the Nyqvist frequency. It is assumed that the time series
+    vanishes outside the transformation interval, but this must be
+    enforced by multiplication with a \emph{window function}. This is
+    equivalent to a convolution in frequency domain. Example of a window
+    functions:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Hann, \(w(t) = \tfrac12 (1 + \cos\tfrac{2\pi}{T}(t - t_0 - T/2))\)
+      Different possibilities to calculate harmonic coefficients.
+    \end{itemize}
+  \item
+    Calibration: at this stage the response curve of the device is
+    considered. For example, with
+  \item
+    \(g(t)\) observed time series
+  \item
+    \(f(t)\) true time series
+  \item
+    \(r(t)\) response function of the device \[
+    g(t) = r(t) \ast f(t)
+       \] Example: measurement of the earth magnetic field pulsation
+    using an induction coil magnetometer.
+  \item
+    Time dom. \(g(t) = r(t)\ast \partial_t f(t)\)
+  \item
+    Freq dom. \(G(\omega) = i\omega F(\omega)\)
+  \end{itemize}
+\end{enumerate}

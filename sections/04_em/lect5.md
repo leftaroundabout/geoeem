@@ -155,7 +155,7 @@ $$
 $$
 which means the field diffuses like a quasi-homogeneous field ($k=0$).
 
-Example: oscillating current in height $H=300\physu{km}$
+Example: oscillating current in height 300 km
 ---
 
 - For $T = 36\physu{s}$, $p = 30\physu{km}$ so $p\cdot k = 0.15$, i.e. diffusion is dictated by $p$
