@@ -1,4 +1,4 @@
-\setcounter{section}{1}\addtocounter{section}{-1}\section{Field station }
+\setcounter{section}{5}\setcounter{subsection}{1}\addtocounter{subsection}{-1}\subsection{Field station }
 
 \begin{itemize}
 \tightlist
@@ -16,7 +16,7 @@
   e.g.~Ag-AgCl have nearly no disturbing potential
 \end{itemize}
 
-\setcounter{section}{2}\addtocounter{section}{-1}\section{Analysis of MT time series }
+\setcounter{section}{5}\setcounter{subsection}{2}\addtocounter{subsection}{-1}\subsection{Analysis of MT time series }
 
 Overview of different steps:
 
@@ -74,7 +74,7 @@ Calculation of the transfer functions
       rectangle/sinc LP filter \[
          \tilde{w}(\omega) = \begin{cases}
                 1   & |\omega|<\omega_0
-              (1/2  & |\omega|=\omega_0 )
+           \\ (1/2  & |\omega|=\omega_0 )
             \\  0   & \text{otherwise}.
             \end{cases}
        \] This has difficulties in practice due to strong oscillations
@@ -84,8 +84,9 @@ Calculation of the transfer functions
          \tilde{w}(\omega) = \begin{cases}
                 1   & 0<|\omega|<\omega_1
               \frac{\omega_2-\omega}{\omega_2-\omega_1}
-                    & \omega_1 < |\omega| < \omega_2
+           \\       & \omega_1 < |\omega| < \omega_2
             \\  0   & \text{otherwise}.
+            \end{cases}
        \] The following quantities are introduced as filter parameters:
       \[
          \omega_0 = \tfrac12(\omega_1 + \omega_2)
@@ -99,8 +100,8 @@ Calculation of the transfer functions
                    = \frac{\omega_0}{\phi}\frac{\sin(\omega_0 t)}{\omega_0t}
                        \cdot\frac{\sin(\Omega t)}{\Omega t}.
        \] The filter should have finite length, so define
-      \$\tilde{w}(\omega): \[
-         \tilde{w}_m(\omega) = \tilde{w}_0 + 2\sum_{n=1}^K w_n\cos(2\pinm/N)
+      \(\tilde{w}(\omega)\): \[
+         \tilde{w}_m(\omega) = \tilde{w}_0 + 2\sum_{n=1}^K w_n\cos(2\pi nm/N)
        \] with \[
          \tilde{w}_0 = \frac{\omega_0}{\omega\rmsc{ny}}
              \left(1 + 2\frac{\sin\alpha_n}{\alpha_n}\cdot\frac{\sin\beta_n}{\beta_n}\right)

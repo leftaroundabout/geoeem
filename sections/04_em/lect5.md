@@ -4,13 +4,15 @@ Basic equations for EM methods
 ===
 
 Decay time of free space charges follows an exponential law $\eta(t) = \eta_0 e^{-t/\tau}$, where
+
 $$(2.2)
   \tau = \frac{\epsilon \epsilon_0}{\sigma}
 $$
+
 - For air: $\sigma \approx 10{-14}\physu{S/m}$, $\epsilon=1$ thus $\tau \approx 15\physu{min}$.
 - For subsurface: $\sigma \approx 10{-5}\physu{S/m}$, $\epsilon=1..80$ thus $\tau \approx 10^{-4}\physu{s}$.
 
-Equtions for
+Equations for
 - Static fields -- no induction
 - in time scale of $\tau$ slowly oscillating fields -- quasi-stationary fields
     - Induction by induced currents much larger than displacement currents

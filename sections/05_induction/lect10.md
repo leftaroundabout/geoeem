@@ -44,8 +44,9 @@ Choice of sensors
              $$
                \tilde{w}(\omega) = \begin{cases}
                       1   & |\omega|<\omega_0
-                    (1/2  & |\omega|=\omega_0 )
+                 \\ (1/2  & |\omega|=\omega_0 )
                   \\  0   & \text{otherwise}.
+                  \end{cases}
              $$
             This has difficulties in practice due to strong oscillations in the vicinity of cutoff frequency.
           - Trapezoidal LP filter
@@ -53,8 +54,9 @@ Choice of sensors
                \tilde{w}(\omega) = \begin{cases}
                       1   & 0<|\omega|<\omega_1
                     \frac{\omega_2-\omega}{\omega_2-\omega_1}
-                          & \omega_1 < |\omega| < \omega_2
+                 \\       & \omega_1 < |\omega| < \omega_2
                   \\  0   & \text{otherwise}.
+                  \end{cases}
              $$
             The following quantities are introduced as filter parameters:
              $$
@@ -73,9 +75,9 @@ Choice of sensors
                          = \frac{\omega_0}{\phi}\frac{\sin(\omega_0 t)}{\omega_0t}
                              \cdot\frac{\sin(\Omega t)}{\Omega t}.
              $$
-             The filter should have finite length, so define $\tilde{w}(\omega):
+             The filter should have finite length, so define $\tilde{w}(\omega)$:
              $$
-               \tilde{w}_m(\omega) = \tilde{w}_0 + 2\sum_{n=1}^K w_n\cos(2\pinm/N)
+               \tilde{w}_m(\omega) = \tilde{w}_0 + 2\sum_{n=1}^K w_n\cos(2\pi nm/N)
              $$
              with
              $$

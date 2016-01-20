@@ -1,18 +1,28 @@
-\section{Basic equations for EM
+\subsection{Basic equations for EM
 methods}\label{basic-equations-for-em-methods}
 
 Decay time of free space charges follows an exponential law
-\(\eta(t) = \eta_0 e^{-t/\tau}\), where \setcounter{equation}{2}\[
-  \tau = \frac{\epsilon \epsilon_0}{\sigma}
-\] - For air: \(\sigma \approx 10{-14}\physu{S/m}\), \(\epsilon=1\) thus
-\(\tau \approx 15\physu{min}\). - For subsurface:
-\(\sigma \approx 10{-5}\physu{S/m}\), \(\epsilon=1..80\) thus
-\(\tau \approx 10^{-4}\physu{s}\).
+\(\eta(t) = \eta_0 e^{-t/\tau}\), where
 
-Equtions for - Static fields -- no induction - in time scale of \(\tau\)
-slowly oscillating fields -- quasi-stationary fields - Induction by
-induced currents much larger than displacement currents - in time scale
-of \(\tau\) quickly oscillating fields -- displacement currents
+\setcounter{equation}{2}\[
+  \tau = \frac{\epsilon \epsilon_0}{\sigma}
+\]
+
+\begin{itemize}
+\tightlist
+\item
+  For air: \(\sigma \approx 10{-14}\physu{S/m}\), \(\epsilon=1\) thus
+  \(\tau \approx 15\physu{min}\).
+\item
+  For subsurface: \(\sigma \approx 10{-5}\physu{S/m}\),
+  \(\epsilon=1..80\) thus \(\tau \approx 10^{-4}\physu{s}\).
+\end{itemize}
+
+Equations for - Static fields -- no induction - in time scale of
+\(\tau\) slowly oscillating fields -- quasi-stationary fields -
+Induction by induced currents much larger than displacement currents -
+in time scale of \(\tau\) quickly oscillating fields -- displacement
+currents
 
 \begin{verbatim}
                   | Static          | Slow           | Quick
@@ -23,7 +33,7 @@ of \(\tau\) quickly oscillating fields -- displacement currents
 \(\nabla\times\Elct\) \textbar{} \(0\) \textbar{} \(-\dot\Magn\)
 \textbar{} \(-\dot\Magn\)
 
-\subsection{General Maxwell equations for electric and magnetic field
+\subsubsection{General Maxwell equations for electric and magnetic field
 quantities}\label{general-maxwell-equations-for-electric-and-magnetic-field-quantities}
 
 \setcounter{equation}{3}\[\tag{3.a}
@@ -79,7 +89,7 @@ Application areas:
   \end{itemize}
 \end{itemize}
 
-\subsection{Fourier transform of the field
+\subsubsection{Fourier transform of the field
 quantities}\label{fourier-transform-of-the-field-quantities}
 
 Switch to (position-space) frequency domain: \[
@@ -130,7 +140,7 @@ through a non-conductor. For \((p\cdot k)^2 \ll 1\), \[
 \] which means the field diffuses like a quasi-homogeneous field
 (\(k=0\)).
 
-\subsection{Example: oscillating current in height 300
+\subsubsection{Example: oscillating current in height 300
 km}\label{example-oscillating-current-in-height-300-km}
 
 \begin{itemize}
@@ -146,7 +156,7 @@ km}\label{example-oscillating-current-in-height-300-km}
   by \(k\).
 \end{itemize}
 
-\section{Induction in homogeneous half
+\subsection{Induction in homogeneous half
 space}\label{induction-in-homogeneous-half-space}
 
 Solutions in \(z>0\) and \(z<0\) can be combined by continuity
